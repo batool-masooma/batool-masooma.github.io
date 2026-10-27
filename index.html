@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masooma Batool · Environmental scientist</title>
+<meta name="description" content="Masooma Batool, environmental scientist at UFZ Leipzig. Long-term nitrogen and phosphorus surplus data for Europe, EU nitrogen policy scenarios, and support for doctoral researchers.">
+<meta property="og:title" content="Masooma Batool · Environmental scientist">
+<meta property="og:description" content="Long-term nitrogen and phosphorus surplus data for Europe (1850–2019), EU nitrogen policy scenarios, and support for doctoral researchers.">
+<meta property="og:image" content="https://batool-masooma.github.io/assets/typology-map.jpg">
+<meta property="og:url" content="https://batool-masooma.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://batool-masooma.github.io/">
+<meta name="theme-color" content="#1F2A30">
+<style>
+:root{
+  --ink:#1F2A30; --text:#2E3A40; --muted:#5E6A72; --line:#DDE3E6; --bg:#FFFFFF; --panel:#F2F5F7;
+  --blue:#2B4F8E; --man:#E66101; --fert:#1F95A6; --mod:#8856A7; --nat:#C99A2E; --land:#E4E9EC; --visit:#8A979E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;font-size:17px}
+a{color:var(--blue);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{color:var(--ink);line-height:1.15;letter-spacing:-.015em;margin:0}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(36px,5vw,60px)}
+h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(28px,3.2vw,40px);margin-bottom:14px}
+h3{font-size:19px;margin-bottom:6px}
+p{margin:0 0 14px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+
+/* the four typology dots: the same mark as on my poster and name cards */
+.dots{display:inline-flex;gap:6px;vertical-align:middle}
+.dots i{width:11px;height:11px;border-radius:50%;display:block}
+.dots i:nth-child(1){background:var(--man)}.dots i:nth-child(2){background:var(--fert)}
+.dots i:nth-child(3){background:var(--mod)}.dots i:nth-child(4){background:var(--nat)}
+.dots.big i{width:16px;height:16px}
+
+header.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-weight:700}
+.links{display:flex;gap:20px;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--text);font-size:15px}
+.links a:hover{color:var(--blue)}
+
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:60px;padding-bottom:52px}
+.kicker{font-size:15px;color:var(--muted);margin-bottom:14px}
+.lead{font-size:19px;color:#3d4a50;max-width:620px}
+.hero figure{margin:0}
+.hero img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:4px}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:11px 18px;border-radius:3px;font-weight:650;font-size:15px;text-decoration:none;background:var(--ink);color:#fff;border:1px solid var(--ink)}
+.btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--panel);color:var(--ink)}
+.status{margin-top:22px;font-size:15px;color:var(--muted)}
+
+.numbers{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.num{padding:26px 20px}
+.num + .num{border-left:1px solid var(--line)}
+.num strong{display:block;font-family:Georgia,serif;font-weight:500;font-size:clamp(32px,3.8vw,44px);color:var(--ink);line-height:1}
+.num span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+.milestones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 0 6px}
+.ms{padding-left:14px;border-left:3px solid var(--line)}
+.ms .yr{display:block;font-size:13px;font-weight:700;color:var(--blue)}
+.ms b{display:block;color:var(--ink);font-size:16px;line-height:1.35;margin:2px 0 3px}
+.ms span:last-child{font-size:14px;color:var(--muted)}
+
+section.block{padding:72px 0;border-bottom:1px solid var(--line)}
+.intro{max-width:760px;color:var(--muted);font-size:18px}
+
+.region{display:grid;grid-template-columns:1.35fr .65fr;gap:36px;align-items:start;margin-top:26px}
+.region img{border-radius:4px;border:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:2px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer}
+.chip i{width:12px;height:12px;border-radius:50%;display:block}
+.chip.man i{background:var(--man)}.chip.fert i{background:var(--fert)}.chip.mod i{background:var(--mod)}.chip.nat i{background:var(--nat)}
+.chip.man[aria-pressed="true"]{border-color:var(--man)}.chip.fert[aria-pressed="true"]{border-color:var(--fert)}
+.chip.mod[aria-pressed="true"]{border-color:var(--mod)}.chip.nat[aria-pressed="true"]{border-color:var(--nat)}
+.typo-card{background:var(--panel);border-radius:4px;padding:20px 22px;min-height:170px}
+.typo-card h3{display:flex;align-items:center;gap:10px}
+.typo-card h3 i{width:14px;height:14px;border-radius:50%;display:block}
+.takeaway{margin-top:20px;padding:18px 20px;border:1px solid var(--line);border-radius:4px}
+.takeaway strong.big{font-family:Georgia,serif;font-weight:500;font-size:30px;color:var(--ink)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{border:1px solid var(--line);border-radius:4px;padding:22px;background:#fff;display:flex;flex-direction:column}
+.card .tag{font-size:13px;font-weight:700;margin-bottom:8px}
+.card p{font-size:15px;color:var(--muted)}
+.card .more{margin-top:auto;font-size:14px;font-weight:650}
+.tag.c1{color:var(--man)}.tag.c2{color:var(--fert)}.tag.c3{color:var(--mod)}.tag.c4{color:var(--nat)}.tag.c5{color:var(--blue)}
+
+.pubs{list-style:none;padding:0;margin:24px 0 0}
+.pubs li{padding:15px 0;border-bottom:1px solid var(--line)}
+.pubs .t{display:block;color:var(--ink);font-weight:650}
+.pubs .m{display:block;font-size:14px;color:var(--muted)}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--panel);color:var(--blue);margin-left:6px;vertical-align:middle}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:26px}
+
+.roles{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px}
+.role{background:var(--panel);border-radius:4px;padding:20px 22px}
+.role .when{font-size:13px;color:var(--muted);font-weight:650}
+.role p{font-size:15px;margin:6px 0 0}
+
+/* places map */
+.mapbox{margin-top:14px;max-width:860px;border:1px solid var(--line);border-radius:4px;background:#fff;position:relative}
+.mapbox svg{display:block;width:100%;height:auto}
+.mapbox .land{fill:var(--land);stroke:#fff;stroke-width:.3}
+.pin{cursor:pointer}
+.pin:focus{outline:none}
+.pin:focus .ring,.pin:hover .ring{stroke:var(--man)}
+.maptools{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:12px 16px;border-top:1px solid var(--line)}
+.toggle button{font:inherit;font-size:14px;font-weight:650;padding:6px 12px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:3px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.key{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.key span{display:inline-flex;align-items:center;gap:6px}
+.key svg{width:14px;height:14px}
+#pin-note{font-size:15px;color:var(--ink);min-height:24px;padding:10px 16px 14px}
+.places{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:22px;max-width:860px}
+.places h3{font-size:16px}
+.places ul{list-style:none;padding:0;margin:8px 0 0}
+.places li{font-size:15px;padding:5px 0;border-bottom:1px solid var(--line)}
+.places li span{color:var(--muted);font-size:14px}
+
+.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:28px}
+.stop{padding:0 22px 0 0}
+.stop .place{display:flex;align-items:center;gap:10px;font-weight:750;color:var(--ink);font-size:18px;margin-bottom:12px}
+.stop .place i{width:14px;height:14px;border-radius:50%;background:var(--ink);display:block}
+.stop ul{list-style:none;padding:0 0 0 16px;margin:0;border-left:2px solid var(--line)}
+.stop li{font-size:15px;margin-bottom:10px}
+.stop li b{color:var(--ink)}
+
+.contact{background:var(--ink);color:#e9eef1;border-radius:6px;padding:48px 40px;margin:72px 0}
+.contact h2{color:#fff}
+.contact .btn{background:#fff;color:var(--ink);border-color:#fff}
+.contact .btn:hover{background:#e3eaf5;color:var(--ink)}
+.contact .btn.ghost{background:transparent;color:#fff;border-color:#8a9aa3}
+.contact .btn.ghost:hover{background:#2c3a42;color:#fff}
+footer{padding:0 0 48px;font-size:13px;color:var(--muted)}
+:focus-visible{outline:3px solid var(--nat);outline-offset:3px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:36px;padding-bottom:40px}
+  .hero figure{max-width:380px}
+  .numbers{grid-template-columns:1fr 1fr}
+  .num:nth-child(3){border-left:0}
+  .num:nth-child(n+3){border-top:1px solid var(--line)}
+  .region,.two,.roles,.cards,.journey,.places,.milestones{grid-template-columns:1fr}
+  .journey{gap:26px}
+  .links{display:none}
+  section.block{padding:50px 0}
+  .contact{padding:34px 22px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="#top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Masooma Batool</a>
+    <div class="links">
+      <a href="#region">Your region</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#community">Community</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="wrap hero">
+  <div>
+    <p class="kicker">Environmental scientist at UFZ, Leipzig</p>
+    <h1>I follow nitrogen through 170 years of European farming.</h1>
+    <p class="lead" style="margin-top:20px">I work at the Helmholtz Centre for Environmental Research (UFZ) in Leipzig. I reconstruct nitrogen and phosphorus surpluses for Europe back to 1850, and use them to test whether EU policies are enough to cut nutrient pollution. My datasets are open, and I like it when other people put them to use.</p>
+    <p class="lead" style="margin-top:-4px">My path to Europe started with a fully funded Netherlands Fellowship Programme scholarship for an MSc at Wageningen University &amp; Research.</p>
+    <div class="actions">
+      <a class="btn" href="#region">Find your region</a>
+      <a class="btn ghost" href="#contact">Contact me</a>
+    </div>
+    <p class="status">PhD in Environmental Pollution, University of Potsdam: defended on 2 October 2026, <em>magna cum laude</em>. From January 2027 I am open to roles in science management, project coordination and research.</p>
+  </div>
+  <figure>
+    <img src="assets/portrait.jpg" alt="Portrait of Masooma Batool" width="900" height="1222">
+    <figcaption>On the day of my PhD defence, 2 October 2026</figcaption>
+  </figure>
+</section>
+
+<div class="wrap">
+  <div class="numbers" aria-label="Key numbers">
+    <div class="num"><strong>170</strong><span>years of nitrogen and phosphorus budgets for Europe (1850–2019)</span></div>
+    <div class="num"><strong>16,000+</strong><span>downloads of my open datasets</span></div>
+    <div class="num"><strong>5</strong><span>first-author papers, including <em>Nature Food</em>, <em>One Earth</em> and <em>Nature Geoscience</em></span></div>
+    <div class="num"><strong>7</strong><span>countries where I have presented my work, from the USA to Japan</span></div>
+  </div>
+  <div class="milestones" aria-label="Milestones">
+    <div class="ms"><span class="yr">2016–2018</span><b>MSc Environmental Sciences, Wageningen University &amp; Research</b><span>Fully funded by a Netherlands Fellowship Programme scholarship</span></div>
+    <div class="ms"><span class="yr">2022</span><b>Best Student Poster Award</b><span>XXI International Nitrogen Workshop, Madrid</span></div>
+    <div class="ms"><span class="yr">2026</span><b>PhD <em>magna cum laude</em>, University of Potsdam</b><span>Research at UFZ Leipzig, 2020–2026</span></div>
+  </div>
+</div>
+
+<section class="block" id="region">
+  <div class="wrap">
+    <h2>Which nitrogen type is your region?</h2>
+    <p class="intro">With my colleagues, I grouped 393 European regions by how their nitrogen inputs, outputs and land use changed between 1850 and 2019. Four types came out of it. Pick one to read about it.</p>
+    <div class="region">
+      <figure style="margin:0">
+        <img src="assets/typology-map.jpg" alt="Map of Europe in four colours: manure-led regions (orange) in the Netherlands, Denmark and parts of the UK; fertilizer-led regions (teal) across central Europe; regions with mixed inputs (purple) in eastern and southern Europe; mostly natural regions (gold) in northern Scandinavia." width="1600" height="1145" loading="lazy">
+        <figcaption>Nitrogen surplus typologies. Batool et al. (2025), <em>Nature Food</em>.</figcaption>
+      </figure>
+      <div>
+        <div class="chips" role="group" aria-label="Choose a nitrogen type">
+          <button class="chip man" data-t="man" aria-pressed="true"><i></i>MAN</button>
+          <button class="chip fert" data-t="fert" aria-pressed="false"><i></i>FERT</button>
+          <button class="chip mod" data-t="mod" aria-pressed="false"><i></i>MOD</button>
+          <button class="chip nat" data-t="nat" aria-pressed="false"><i></i>NAT</button>
+        </div>
+        <div class="typo-card" id="typo-card" aria-live="polite"></div>
+        <div class="takeaway">
+          <p class="small muted" style="margin-bottom:6px">The EU wants to halve nutrient losses by 2030 and use at least 20% less fertilizer. In our scenarios, a 20% fertilizer cut on its own lowers agricultural nitrogen surplus by only</p>
+          <strong class="big">10–16%</strong>
+          <p class="small muted" style="margin:6px 0 0">or 16–28% if technologies and management improve. Each type of region needs its own strategy. <a href="https://doi.org/10.1038/s43016-025-01210-2" target="_blank" rel="noopener">Read the paper</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="research">
+  <div class="wrap">
+    <h2>What I work on</h2>
+    <p class="intro">Most of my work is about long-term data: building it, checking it, and using it to answer policy questions.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="tag c1">Open data</div>
+        <h3>170 years of nitrogen and phosphorus surplus</h3>
+        <p>Gridded reconstructions of soil nutrient surplus across Europe for 1850–2019. For nitrogen, 16 alternative estimates show how much the results depend on the input data.</p>
+        <a class="more" href="#data">Get the data</a>
+      </article>
+      <article class="card">
+        <div class="tag c2">EU policy</div>
+        <h3>Is a 20% fertilizer cut enough?</h3>
+        <p>Using the four regional types, we tested 2030 scenarios. The EU's fertilizer target alone does not come close to halving nitrogen surplus.</p>
+        <a class="more" href="https://doi.org/10.1038/s43016-025-01210-2" target="_blank" rel="noopener"><em>Nature Food</em>, 2025</a>
+      </article>
+      <article class="card">
+        <div class="tag c3">Indicators</div>
+        <h3>Trends in nitrogen management across European agriculture</h3>
+        <p>An index that looks at environmental safety and agricultural production together, for European regions since the 1960s.</p>
+        <span class="more muted"><em>One Earth</em>, in press</span>
+      </article>
+      <article class="card">
+        <div class="tag c4">Pollution reduction</div>
+        <h3>A decade of missed opportunities for nitrogen pollution reduction in Europe</h3>
+        <p>More here once the paper is out.</p>
+        <span class="more muted"><em>Nature Geoscience</em>, accepted</span>
+      </article>
+      <article class="card">
+        <div class="tag c5">Current project</div>
+        <h3>Pesticide use across Europe</h3>
+        <p>In the BASE project at UFZ, I am building Europe-wide pesticide-use maps for interdisciplinary biodiversity research.</p>
+        <span class="more muted">Since 2026</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="publications">
+  <div class="wrap">
+    <h2>Publications</h2>
+    <p class="muted small" style="margin:0">I have also reviewed for <em>Scientific Data</em> (2023).</p>
+    <ul class="pubs">
+      <li><span class="t">A decade of missed opportunities for nitrogen pollution reduction in Europe <span class="badge">accepted</span></span><span class="m">Batool, M. et al. · <em>Nature Geoscience</em></span></li>
+      <li><span class="t">Trends in nitrogen management across European agricultural systems reveal progress since the 1980s but also required considerable improvements <span class="badge">in press</span></span><span class="m">Batool, M. et al. · <em>One Earth</em></span></li>
+      <li><span class="t">Scenario analysis of nitrogen surplus typologies in Europe shows that a 20% fertilizer reduction may fall short of 2030 EU Green Deal goals</span><span class="m">Batool, M. et al. (2025) · <em>Nature Food</em> 6, 787–798 · <a href="https://doi.org/10.1038/s43016-025-01210-2" target="_blank" rel="noopener">doi:10.1038/s43016-025-01210-2</a></span></li>
+      <li><span class="t">Century-long reconstruction of gridded phosphorus surplus across Europe (1850–2019)</span><span class="m">Batool, M., Sarrazin, F. J., Kumar, R. (2025) · <em>Earth System Science Data</em> 17, 881–916 · <a href="https://doi.org/10.5194/essd-17-881-2025" target="_blank" rel="noopener">doi:10.5194/essd-17-881-2025</a></span></li>
+      <li><span class="t">Long-term annual soil nitrogen surplus across Europe (1850–2019)</span><span class="m">Batool, M., Sarrazin, F. J., Attinger, S., Basu, N. B., Van Meter, K., Kumar, R. (2022) · <em>Scientific Data</em> 9, 612 · <a href="https://doi.org/10.1038/s41597-022-01693-9" target="_blank" rel="noopener">doi:10.1038/s41597-022-01693-9</a></span></li>
+      <li><span class="t">QUADICA v2: extending the large-sample data set for water QUAlity, DIscharge and Catchment Attributes in Germany</span><span class="m">Ebeling, P. et al., incl. Batool, M. (2026) · <em>Earth System Science Data</em> 18, 691–712 · <a href="https://essd.copernicus.org/articles/18/691/2026/" target="_blank" rel="noopener">essd.copernicus.org</a></span></li>
+      <li><span class="t">A triple increase in global river basins with water scarcity due to future pollution</span><span class="m">Wang, M. et al., incl. Batool, M. (2024) · <em>Nature Communications</em> 15, 880 · <a href="https://doi.org/10.1038/s41467-024-44947-3" target="_blank" rel="noopener">doi:10.1038/s41467-024-44947-3</a></span></li>
+    </ul>
+
+    <div class="two" id="data">
+      <div>
+        <h3>Open data and code</h3>
+        <ul class="pubs" style="margin-top:8px">
+          <li><span class="t">Long-term annual soil nitrogen surplus across Europe (1850–2019), v1.0</span><span class="m">Zenodo (2022) · <a href="https://zenodo.org/records/6581441" target="_blank" rel="noopener">zenodo.org/records/6581441</a></span></li>
+          <li><span class="t">Century long reconstruction of gridded phosphorus surplus across Europe (1850–2019), v2.0</span><span class="m">Zenodo (2024) · <a href="https://zenodo.org/records/14262958" target="_blank" rel="noopener">zenodo.org/records/14262958</a></span></li>
+          <li><span class="t">Analysis code for the nitrogen surplus typology scenarios (<em>Nature Food</em>, 2025)</span><span class="m">GitHub · <a href="https://github.com/batool-masooma/N_surplus_typologies_Europe" target="_blank" rel="noopener">github.com/batool-masooma/N_surplus_typologies_Europe</a></span></li>
+          <li><span class="t">Analysis code for N surplus and ENMI</span><span class="m"><a href="https://git.ufz.de/batool/n_surplus_enmi" target="_blank" rel="noopener">git.ufz.de/batool/n_surplus_enmi</a></span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Reports</h3>
+        <ul class="pubs" style="margin-top:8px">
+          <li><span class="t">Quality Known: GlobeWQ Final Report</span><span class="m">Schmidt, C. et al., incl. Batool, M. (2023) · UFZ Leipzig · <a href="https://www.globewq.info" target="_blank" rel="noopener">globewq.info</a></span></li>
+          <li><span class="t">Decarbonisation options for the Dutch fertiliser industry</span><span class="m">Batool, M. and Wetzels, W. (2019) · PBL Netherlands Environmental Assessment Agency and ECN part of TNO</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="community">
+  <div class="wrap">
+    <h2>Outside my own research</h2>
+    <p class="intro">Since 2021 a good part of my time has gone into doctoral researchers' life at UFZ and in the Helmholtz Association: representing them, organising events, and turning survey results into something people act on.</p>
+    <div class="roles">
+      <div class="role"><div class="when">Doctoral Initiative (Do-It), UFZ · vice-speaker 2022–2025</div><h3>Representing doctoral researchers</h3><p>Point of contact between UFZ doctoral researchers, UFZ management and the graduate school HIGRADE. I also introduced Do-It in welcome courses for new doctoral researchers.</p></div>
+      <div class="role"><div class="when">DocDays, UFZ · 2025–2026</div><h3>A retreat for doctoral researchers</h3><p>For DocDays 2026 (about 35 participants), I put together a six-person organising team and planned workshops on stress in research and on the scientific elevator pitch.</p></div>
+      <div class="role"><div class="when">Helmholtz Juniors · since 2022</div><h3>UFZ representative, communications</h3><p>I represent UFZ in the network of about 8,000 Helmholtz doctoral researchers. As communications vice-speaker in 2024, I helped grow the network's LinkedIn page from about 790 to over 1,050 followers.</p></div>
+      <div class="role"><div class="when">Department of Computational Hydrosystems, UFZ · since 2023</div><h3>Colloquium coordinator</h3><p>Two to three colloquia a month with speakers from inside and outside UFZ. I invite the speakers, chair the sessions and moderate the discussions.</p></div>
+      <div class="role"><div class="when">N² Survey · 2024</div><h3>Survey results people can use</h3><p>I coordinated the review of UFZ results from the N² Survey (103 respondents) and summarised them in a one-page infographic for HIGRADE and the Helmholtz Juniors.</p></div>
+      <div class="role"><div class="when">Teaching and mentoring · 2011–2019</div><h3>Lecturer and mentor</h3><p>Lecturer in natural and life sciences in Pakistan (2011–2013). At Wageningen University, I guided an MSc student in GIS data processing and ran the MSc dissertation ring (2019).</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="block" id="journey">
+  <div class="wrap">
+    <h2>From Lahore to Leipzig</h2>
+    <p class="intro">Three countries have been home so far, and my research has taken me to conferences from Chicago to Kyoto.</p>
+    <div class="journey">
+      <div class="stop">
+        <div class="place"><i></i>Pakistan</div>
+        <ul>
+          <li><b>BSc Environmental Sciences</b><br>University of the Punjab</li>
+          <li><b>Lecturer</b> in natural and life sciences<br>Paras Institute, 2011–2013</li>
+          <li><b>Environmental specialist</b><br>Royal Engineers and Consultants, Lahore, 2014–2016</li>
+        </ul>
+      </div>
+      <div class="stop">
+        <div class="place"><i></i>The Netherlands</div>
+        <ul>
+          <li><b>MSc Environmental Sciences</b><br>Wageningen University &amp; Research, 2016–2018, on a full Netherlands Fellowship Programme scholarship</li>
+          <li><b>Environmental analyst intern</b><br>TNO / ECN, MIDDEN project, 2018</li>
+          <li><b>Geospatial research assistant</b><br>International Nitrogen Management System (INMS), Wageningen, 2019</li>
+        </ul>
+      </div>
+      <div class="stop">
+        <div class="place"><i></i>Germany</div>
+        <ul>
+          <li><b>Doctoral researcher</b><br>UFZ Leipzig, GlobeWQ project, 2020–2026</li>
+          <li><b>PhD in Environmental Pollution</b><br>University of Potsdam, defended 2 October 2026, <em>magna cum laude</em></li>
+          <li><b>Researcher</b><br>UFZ Leipzig, BASE project, since 2026</li>
+        </ul>
+      </div>
+    </div>
+    
+    <h3 style="margin-top:44px">21 countries so far, on three continents</h3>
+    <p class="muted small" style="margin:4px 0 0">Select a dot to see what happened there.</p>
+    <div class="mapbox">
+      <svg id="placemap" viewBox="-40 -232 168 105" role="img" aria-label="Map of places where Masooma Batool has lived, presented her research or travelled">
+        <path class="land" d="M203,-145L202,-145L202,-144L201,-144L196,-143L194,-141L196,-138L195,-135L196,-134L193,-133L195,-131L193,-130L193,-126L192,-125L190,-125L189,-123L187,-123L186,-122L186,-118L181,-116L176,-116L171,-118L173,-122L172,-124L170,-124L168,-130L168,-132L167,-132L167,-134L168,-135L167,-135L168,-139L172,-138L172,-140L176,-142L176,-145L178,-145L178,-146L185,-144L187,-145L188,-145L188,-146L190,-146L190,-148L191,-149L193,-148L195,-143L199,-146L203,-145ZM53,-164L54,-162L54,-159L56,-157L54,-154L51,-156L52,-161L51,-162L52,-164L53,-164ZM161,-102L162,-100L161,-99L160,-99L161,-96L160,-96L160,-90L152,-92L149,-96L149,-97L150,-96L155,-96L157,-97L160,-104L161,-102ZM125,-151L124,-151L122,-153L116,-155L115,-159L119,-159L122,-156L122,-155L124,-153L125,-151ZM43,-184L43,-181L41,-181L42,-180L42,-179L41,-178L37,-177L32,-178L31,-179L28,-178L24,-179L25,-181L26,-180L28,-180L31,-181L33,-180L32,-182L35,-184L37,-184L38,-185L43,-184ZM124,-151L122,-151L120,-154L122,-153L124,-151ZM128,-161L134,-156L132,-156L132,-149L129,-151L129,-153L128,-154L125,-151L124,-153L122,-155L122,-156L119,-159L120,-160L123,-159L122,-161L126,-159L128,-161ZM15,-191L16,-189L14,-187L12,-188L12,-189L10,-188L10,-189L6,-192L12,-193L15,-191ZM11,-47L11,-43L9,-37L8,-37L8,-26L5,-25L5,-37L2,-43L4,-46L6,-46L7,-49L8,-50L11,-47ZM1,-60L1,-56L4,-54L3,-53L5,-51L6,-51L7,-47L4,-46L3,-44L-1,-45L-2,-44L-8,-44L-8,-38L-10,-40L-14,-39L-16,-42L-16,-45L-16,-48L-13,-50L-13,-53L-12,-54L-10,-54L-8,-57L-6,-57L-2,-61L1,-60ZM269,-88L269,-85L268,-85L269,-83L266,-89L265,-91L263,-90L262,-94L261,-94L262,-93L263,-89L262,-87L261,-90L261,-88L260,-87L259,-89L260,-87L259,-87L256,-94L255,-97L253,-98L254,-100L255,-101L252,-103L252,-106L256,-103L256,-104L258,-101L264,-100L266,-99L263,-94L265,-92L265,-95L266,-95L269,-88ZM74,-168L72,-163L74,-162L70,-162L69,-159L67,-159L65,-160L61,-160L61,-161L59,-163L59,-165L60,-166L58,-168L59,-169L60,-168L66,-168L70,-169L74,-168ZM-221,-103L-220,-106L-222,-107L-220,-105L-221,-103ZM49,-172L50,-172L50,-170L51,-169L50,-169L51,-167L49,-167L48,-164L42,-169L41,-173L42,-172L44,-173L49,-172ZM66,-207L73,-205L73,-203L79,-199L78,-198L76,-198L77,-195L75,-194L75,-192L63,-194L58,-193L58,-195L56,-195L58,-197L56,-200L62,-201L61,-203L63,-204L63,-206L66,-207ZM-262,-64L-263,-64L-262,-72L-259,-74L-259,-73L-260,-67L-262,-64ZM-170,-8L-168,-8L-168,-10L-165,-11L-163,-9L-162,-10L-159,-9L-155,-17L-152,-9L-150,-7L-150,-5L-154,0L-156,6L-158,6L-156,6L-153,4L-152,8L-148,7L-149,11L-148,8L-145,6L-146,5L-145,3L-143,3L-137,5L-136,7L-136,6L-134,7L-135,9L-134,9L-133,10L-134,13L-133,10L-133,11L-130,10L-125,12L-120,12L-116,15L-112,20L-106,21L-104,28L-104,32L-106,37L-111,45L-114,52L-115,51L-115,52L-115,71L-116,73L-116,78L-119,85L-119,88L-121,89L-122,92L-124,92L-125,91L-125,92L-129,92L-129,93L-131,95L-133,95L-135,97L-138,101L-140,101L-139,102L-139,104L-138,113L-140,116L-142,123L-145,126L-145,125L-143,124L-142,120L-144,119L-144,121L-145,124L-146,130L-147,132L-148,130L-148,129L-150,126L-156,122L-157,123L-160,119L-162,119L-158,112L-153,108L-153,105L-155,102L-157,102L-156,96L-158,95L-160,96L-162,89L-164,88L-165,89L-168,88L-168,84L-170,81L-169,80L-170,79L-169,73L-170,70L-172,69L-172,66L-177,65L-179,61L-178,61L-179,56L-181,54L-183,55L-187,51L-192,50L-193,48L-195,45L-195,39L-199,40L-205,45L-211,44L-211,38L-213,40L-215,40L-216,38L-219,38L-218,36L-222,31L-221,28L-219,26L-219,21L-213,17L-210,17L-209,5L-211,1L-211,-2L-208,-3L-208,-4L-210,-4L-210,-7L-205,-7L-205,-8L-204,-7L-203,-9L-202,-5L-199,-3L-198,-4L-197,-3L-191,-9L-191,-10L-193,-10L-193,-15L-195,-17L-192,-16L-190,-16L-189,-15L-188,-16L-183,-18L-182,-20L-182,-21L-181,-21L-180,-21L-181,-18L-179,-18L-179,-16L-180,-11L-179,-7L-177,-5L-172,-8L-170,-8ZM345,-20L344,-16L343,-19L345,-20ZM260,-110L262,-108L262,-107L256,-106L253,-108L255,-112L259,-111L260,-110ZM68,-44L71,-40L70,-36L72,-35L73,-34L75,-32L75,-30L79,-27L80,-25L81,-23L82,-21L77,-22L75,-20L69,-19L67,-17L62,-18L59,-21L56,-18L56,-14L53,-15L50,-14L49,-9L48,-12L45,-15L44,-21L43,-25L46,-29L50,-32L50,-31L53,-32L56,-33L57,-35L57,-36L61,-37L65,-42L65,-43L67,-44L68,-44ZM-156,-175L-157,-174L-156,-175L-154,-176L-153,-175L-156,-174L-158,-174L-153,-179L-154,-176L-156,-175ZM-163,-177L-158,-177L-160,-175L-161,-176L-163,-176L-164,-177L-162,-179L-163,-177ZM-193,-172L-184,-177L-179,-179L-173,-183L-164,-186L-161,-185L-162,-183L-164,-182L-168,-182L-166,-181L-163,-181L-166,-179L-165,-179L-165,-176L-161,-174L-159,-175L-157,-173L-165,-170L-166,-171L-171,-167L-172,-168L-171,-171L-166,-173L-165,-172L-163,-173L-167,-173L-165,-175L-170,-173L-171,-172L-173,-173L-173,-174L-174,-174L-172,-179L-173,-180L-175,-179L-175,-180L-182,-173L-184,-172L-193,-172ZM-154,-185L-157,-186L-160,-188L-156,-187L-154,-185ZM-314,-190L-310,-189L-311,-187L-310,-186L-310,-183L-313,-184L-312,-186L-314,-185L-314,-186L-315,-186L-314,-187L-316,-188L-315,-189L-317,-189L-315,-190L-316,-190L-316,-191L-314,-190ZM-136,-193L-137,-192L-141,-187L-139,-189L-138,-188L-140,-187L-138,-187L-138,-185L-136,-187L-136,-186L-134,-186L-136,-183L-133,-184L-136,-182L-136,-181L-133,-182L-135,-180L-133,-181L-133,-180L-135,-178L-136,-177L-136,-179L-138,-178L-136,-180L-137,-181L-142,-178L-138,-181L-141,-180L-142,-180L-141,-181L-144,-181L-150,-181L-150,-182L-146,-184L-148,-184L-146,-185L-145,-185L-145,-186L-144,-187L-140,-191L-136,-193ZM-318,-198L-320,-197L-319,-197L-320,-195L-320,-198L-318,-198ZM-311,-197L-313,-195L-312,-197L-313,-197L-312,-198L-311,-198L-311,-197ZM-318,-201L-317,-200L-319,-200L-315,-201L-320,-198L-319,-200L-318,-201ZM-185,-207L-187,-206L-186,-207L-189,-206L-186,-208L-187,-207L-186,-208L-185,-207ZM-180,-225L-186,-223L-183,-225L-180,-225ZM-182,-231L-181,-231L-179,-231L-177,-230L-178,-228L-176,-228L-175,-227L-177,-227L-181,-228L-187,-226L-187,-227L-190,-227L-187,-228L-183,-232L-182,-232L-182,-231ZM-157,-238L-156,-238L-158,-236L-162,-236L-160,-237L-157,-238ZM-200,-241L-197,-239L-200,-238L-205,-239L-201,-241L-200,-241ZM-193,-172L-200,-167L-205,-167L-206,-167L-207,-165L-218,-161L-219,-162L-214,-167L-212,-173L-214,-175L-214,-176L-215,-176L-214,-177L-216,-177L-216,-178L-222,-183L-225,-182L-231,-182L-233,-184L-237,-184L-237,-186L-238,-185L-308,-185L-306,-187L-308,-186L-309,-187L-307,-187L-308,-187L-307,-189L-309,-188L-308,-191L-309,-190L-312,-190L-311,-191L-312,-190L-311,-192L-313,-191L-314,-192L-310,-194L-313,-193L-313,-194L-310,-196L-309,-195L-309,-196L-308,-197L-313,-194L-310,-197L-311,-197L-311,-199L-310,-200L-310,-199L-309,-198L-310,-199L-309,-200L-313,-198L-313,-200L-310,-201L-312,-201L-311,-202L-307,-205L-309,-204L-306,-207L-309,-208L-307,-213L-308,-216L-307,-217L-310,-217L-315,-215L-314,-216L-315,-218L-314,-219L-319,-218L-289,-241L-280,-239L-280,-240L-275,-241L-275,-240L-276,-240L-264,-242L-275,-239L-264,-241L-260,-243L-258,-240L-254,-242L-255,-240L-250,-241L-242,-239L-238,-239L-237,-238L-240,-237L-229,-237L-227,-236L-228,-235L-227,-234L-227,-235L-226,-235L-225,-237L-219,-239L-226,-238L-219,-239L-218,-237L-214,-237L-207,-237L-205,-237L-204,-236L-203,-237L-205,-237L-205,-238L-200,-238L-202,-236L-201,-235L-203,-235L-203,-234L-199,-237L-194,-239L-196,-239L-192,-240L-196,-241L-197,-242L-195,-243L-194,-244L-190,-245L-188,-245L-187,-244L-188,-243L-187,-242L-190,-241L-186,-240L-188,-240L-187,-239L-188,-238L-184,-240L-182,-239L-184,-237L-184,-235L-175,-239L-175,-241L-169,-241L-170,-240L-167,-240L-169,-239L-168,-239L-171,-238L-170,-236L-172,-235L-177,-234L-179,-235L-180,-235L-178,-234L-178,-233L-184,-234L-183,-233L-187,-231L-195,-233L-187,-231L-193,-228L-196,-228L-198,-227L-203,-228L-204,-228L-201,-227L-202,-227L-200,-227L-199,-226L-203,-225L-203,-224L-205,-223L-206,-224L-214,-219L-217,-215L-216,-214L-217,-213L-216,-214L-214,-214L-215,-210L-217,-209L-211,-210L-208,-209L-206,-207L-202,-205L-203,-204L-199,-204L-196,-204L-199,-198L-198,-196L-199,-195L-197,-194L-197,-193L-199,-192L-197,-192L-196,-191L-195,-193L-194,-193L-194,-192L-193,-194L-191,-195L-189,-201L-190,-203L-184,-204L-180,-208L-178,-211L-180,-214L-175,-218L-174,-220L-176,-220L-173,-222L-174,-222L-173,-224L-171,-224L-166,-223L-163,-224L-161,-223L-162,-223L-161,-222L-160,-222L-160,-221L-156,-220L-158,-218L-160,-218L-158,-217L-159,-216L-158,-216L-161,-214L-157,-214L-158,-213L-160,-212L-156,-214L-157,-213L-156,-213L-156,-212L-152,-214L-152,-213L-149,-216L-148,-216L-149,-217L-146,-218L-147,-218L-146,-218L-146,-216L-145,-215L-146,-215L-145,-215L-144,-214L-146,-213L-144,-213L-146,-212L-143,-212L-145,-211L-143,-209L-144,-208L-146,-209L-144,-208L-145,-206L-142,-206L-144,-204L-142,-204L-141,-204L-142,-203L-141,-204L-140,-203L-137,-202L-145,-200L-145,-199L-146,-198L-139,-201L-140,-201L-137,-201L-138,-199L-136,-200L-135,-199L-135,-197L-137,-196L-135,-196L-136,-196L-136,-195L-140,-193L-144,-192L-149,-189L-165,-189L-168,-186L-170,-186L-175,-183L-178,-183L-176,-182L-177,-181L-181,-178L-191,-174L-190,-173L-193,-172ZM-227,-247L-223,-247L-221,-247L-222,-246L-218,-247L-216,-246L-216,-245L-215,-245L-214,-248L-211,-248L-209,-247L-210,-245L-211,-244L-206,-242L-207,-241L-212,-241L-212,-240L-210,-240L-213,-239L-217,-239L-219,-240L-227,-239L-235,-238L-234,-240L-239,-240L-239,-242L-227,-242L-238,-243L-239,-244L-232,-244L-237,-244L-236,-245L-238,-245L-230,-247L-225,-248L-227,-247ZM-156,-248L-152,-248L-151,-247L-158,-247L-159,-248L-159,-249L-156,-248ZM-175,-244L-171,-244L-170,-245L-172,-245L-168,-246L-170,-247L-167,-247L-169,-247L-164,-248L-160,-249L-159,-247L-162,-245L-159,-246L-157,-245L-157,-246L-155,-246L-156,-246L-154,-247L-150,-246L-152,-245L-148,-245L-151,-245L-150,-245L-151,-244L-148,-245L-149,-244L-143,-244L-147,-243L-143,-244L-146,-242L-145,-243L-146,-242L-141,-243L-139,-242L-143,-242L-137,-242L-142,-240L-137,-240L-143,-239L-138,-238L-139,-237L-138,-238L-139,-237L-135,-237L-136,-237L-134,-236L-136,-236L-132,-236L-134,-235L-131,-235L-130,-234L-133,-234L-132,-233L-134,-232L-135,-232L-137,-230L-138,-231L-139,-231L-140,-232L-137,-233L-140,-233L-142,-234L-144,-234L-144,-233L-146,-233L-145,-233L-145,-232L-144,-231L-144,-230L-141,-230L-142,-229L-141,-229L-142,-229L-141,-227L-142,-226L-142,-227L-142,-225L-144,-225L-148,-227L-150,-227L-146,-223L-147,-223L-157,-226L-158,-227L-156,-227L-158,-228L-159,-229L-158,-229L-160,-229L-161,-230L-162,-229L-167,-229L-169,-229L-166,-231L-163,-231L-163,-230L-163,-231L-157,-232L-158,-233L-152,-236L-152,-238L-153,-238L-153,-239L-154,-239L-154,-240L-158,-239L-156,-240L-160,-243L-162,-241L-166,-242L-166,-241L-180,-242L-181,-244L-176,-244L-181,-244L-176,-247L-167,-249L-172,-247L-172,-245L-171,-244L-175,-244ZM-196,-249L-191,-249L-195,-247L-192,-247L-193,-245L-199,-244L-201,-246L-204,-247L-198,-247L-197,-248L-200,-248L-196,-249ZM-182,-249L-177,-249L-190,-245L-188,-248L-182,-249ZM-234,-249L-230,-249L-227,-248L-236,-247L-242,-244L-248,-244L-249,-245L-252,-245L-243,-249L-243,-250L-237,-250L-234,-249ZM-181,-251L-184,-250L-187,-251L-183,-252L-181,-251ZM-187,-253L-188,-252L-188,-251L-190,-251L-194,-251L-195,-251L-191,-252L-198,-252L-194,-252L-195,-252L-195,-253L-192,-252L-191,-253L-193,-253L-187,-253ZM-208,-252L-203,-252L-205,-251L-219,-250L-222,-250L-215,-251L-227,-251L-222,-252L-226,-252L-221,-252L-224,-252L-220,-253L-210,-252L-211,-252L-210,-252L-211,-253L-207,-254L-208,-252ZM-180,-254L-178,-253L-179,-253L-171,-253L-175,-253L-172,-251L-158,-252L-154,-251L-159,-250L-162,-251L-178,-250L-179,-251L-177,-252L-178,-253L-185,-253L-180,-254ZM-219,-254L-225,-253L-226,-253L-225,-253L-231,-252L-236,-252L-226,-254L-219,-254ZM-208,-255L-207,-255L-209,-254L-214,-255L-208,-255ZM-181,-256L-179,-255L-183,-255L-184,-255L-183,-255L-185,-256L-181,-256ZM-193,-257L-187,-256L-187,-255L-197,-256L-194,-256L-197,-257L-193,-257ZM-169,-259L-159,-257L-167,-255L-174,-256L-172,-256L-176,-256L-170,-257L-177,-257L-176,-257L-179,-258L-175,-258L-178,-258L-174,-258L-176,-259L-173,-259L-169,-259ZM-126,-261L-112,-260L-126,-259L-119,-259L-131,-258L-134,-258L-131,-258L-133,-257L-143,-257L-139,-257L-147,-257L-140,-256L-149,-254L-155,-255L-149,-254L-150,-253L-171,-253L-165,-254L-166,-255L-161,-254L-156,-255L-161,-254L-161,-255L-159,-255L-160,-255L-159,-256L-165,-255L-153,-256L-158,-256L-156,-257L-160,-258L-150,-257L-154,-258L-141,-259L-157,-258L-153,-259L-162,-258L-156,-259L-168,-259L-126,-261ZM24,-180L24,-179L27,-178L26,-176L24,-177L23,-175L21,-177L20,-175L18,-175L17,-177L15,-176L18,-180L22,-181L24,-180ZM324,-80L325,-79L323,-74L321,-73L319,-74L318,-77L319,-80L323,-80L323,-81L324,-80ZM342,-164L340,-165L340,-163L339,-163L339,-162L337,-162L339,-160L334,-161L334,-158L332,-157L331,-155L328,-154L325,-150L325,-151L326,-152L326,-153L324,-153L325,-157L323,-158L321,-158L321,-156L319,-154L319,-152L316,-152L317,-149L321,-148L323,-145L325,-145L325,-147L326,-147L332,-146L332,-144L331,-144L329,-143L329,-141L328,-141L327,-137L331,-134L336,-128L340,-126L340,-125L336,-126L335,-126L336,-126L341,-123L339,-120L338,-119L341,-120L344,-118L343,-117L344,-117L344,-115L343,-115L345,-112L343,-112L343,-111L343,-106L341,-106L343,-105L342,-104L341,-104L342,-103L343,-101L342,-101L342,-100L341,-100L341,-98L339,-98L340,-97L339,-94L337,-94L337,-92L330,-90L328,-92L329,-89L328,-89L327,-87L326,-88L326,-87L325,-87L324,-86L322,-85L321,-85L321,-84L322,-82L321,-81L319,-84L320,-86L318,-87L317,-86L315,-88L315,-86L312,-86L310,-88L309,-91L306,-92L304,-93L301,-90L300,-91L298,-90L297,-91L296,-89L295,-90L296,-85L295,-85L294,-87L291,-86L290,-88L288,-89L288,-92L286,-93L285,-96L281,-95L281,-101L282,-103L280,-109L279,-109L277,-113L276,-112L273,-113L273,-114L272,-115L272,-116L271,-117L269,-115L267,-116L264,-113L263,-111L261,-110L255,-112L253,-108L251,-111L249,-110L246,-111L245,-111L244,-111L230,-120L229,-120L228,-119L221,-124L220,-124L218,-128L220,-127L220,-129L218,-132L217,-135L215,-136L214,-139L208,-140L206,-143L202,-145L203,-146L201,-149L198,-150L197,-153L197,-155L199,-157L201,-157L201,-156L203,-156L204,-158L207,-159L208,-160L211,-162L210,-164L211,-166L208,-171L206,-172L210,-173L213,-172L211,-174L211,-179L216,-178L217,-179L215,-183L217,-184L217,-185L219,-186L221,-184L228,-181L232,-177L234,-173L241,-172L247,-170L252,-164L266,-164L277,-160L280,-163L287,-163L289,-165L289,-166L291,-168L288,-170L288,-172L293,-171L294,-173L297,-174L298,-176L299,-177L305,-178L299,-182L297,-182L297,-181L295,-181L293,-181L291,-182L290,-188L294,-187L296,-189L295,-190L294,-195L291,-197L292,-198L297,-199L306,-197L317,-188L327,-185L331,-181L335,-181L335,-182L339,-183L340,-181L340,-180L343,-172L339,-173L338,-172L342,-167L343,-165L342,-164ZM-16,-42L-14,-39L-10,-40L-8,-38L-7,-33L-10,-27L-8,-21L-10,-22L-10,-21L-16,-21L-23,-18L-22,-24L-26,-26L-25,-28L-25,-31L-24,-33L-25,-34L-23,-34L-24,-40L-23,-42L-21,-41L-20,-43L-19,-43L-18,-41L-16,-42ZM46,-30L43,-24L45,-16L48,-12L49,-7L44,-9L30,-9L29,-16L28,-16L27,-18L26,-19L27,-23L30,-28L31,-28L32,-29L33,-26L36,-29L41,-44L43,-47L43,-49L42,-50L42,-53L43,-53L44,-50L45,-43L47,-40L43,-40L42,-39L45,-35L46,-30ZM82,-21L85,-18L89,-19L93,-14L92,-10L94,-9L90,-3L89,6L87,10L88,12L89,26L92,33L86,34L85,37L85,43L84,46L86,50L88,50L89,49L88,54L88,53L86,54L84,51L82,49L81,47L80,48L77,48L75,47L75,45L73,46L71,44L66,45L66,41L65,38L65,30L62,29L62,28L60,28L59,29L58,32L53,33L49,24L39,24L38,24L37,23L38,23L37,21L39,19L40,20L41,18L43,17L43,20L44,20L48,15L49,9L53,2L54,-8L56,-13L56,-17L57,-20L59,-21L62,-18L67,-17L69,-19L75,-20L77,-22L82,-21ZM56,-14L54,-8L53,2L49,9L48,16L44,20L43,20L43,17L41,18L40,20L38,18L36,20L33,16L35,14L36,15L35,10L37,9L38,7L39,9L40,10L41,9L42,10L43,7L44,2L42,1L43,-4L43,-6L40,-5L40,-9L44,-9L48,-7L50,-14L53,-15L56,-14ZM-212,-48L-214,-47L-217,-44L-219,-37L-218,-37L-217,-34L-217,-30L-216,-28L-210,-28L-208,-25L-202,-25L-204,-18L-202,-14L-204,-11L-202,-10L-201,-5L-202,-5L-203,-9L-204,-7L-205,-8L-205,-7L-210,-7L-210,-4L-208,-4L-208,-3L-211,-2L-211,1L-209,5L-210,17L-211,15L-213,15L-211,11L-213,9L-219,10L-222,5L-223,4L-225,1L-229,-2L-230,-1L-233,-2L-234,-3L-238,-7L-236,-7L-236,-10L-234,-11L-232,-16L-233,-17L-232,-19L-233,-22L-232,-23L-232,-27L-233,-29L-233,-31L-232,-31L-231,-32L-231,-35L-230,-32L-230,-35L-226,-38L-226,-41L-223,-45L-222,-44L-222,-43L-221,-46L-218,-46L-213,-50L-212,-50L-212,-48ZM-249,-44L-247,-39L-248,-38L-248,-33L-249,-35L-249,-34L-250,-34L-250,-37L-253,-39L-253,-40L-254,-41L-253,-40L-254,-39L-256,-42L-255,-43L-256,-44L-255,-45L-250,-43L-249,-44ZM-237,-92L-231,-91L-230,-90L-225,-87L-224,-85L-220,-85L-221,-83L-218,-83L-216,-81L-219,-80L-227,-80L-225,-82L-225,-83L-228,-83L-229,-86L-231,-86L-235,-89L-237,-89L-238,-89L-237,-90L-237,-91L-240,-91L-244,-88L-246,-87L-243,-91L-237,-92ZM93,-137L90,-138L94,-139L93,-138L93,-137ZM90,-138L93,-137L91,-136L89,-137L90,-138ZM36,-191L40,-190L41,-189L42,-190L44,-189L47,-187L43,-184L37,-185L37,-184L35,-184L32,-186L30,-189L35,-192L36,-191ZM23,-203L24,-202L26,-202L26,-201L27,-200L30,-202L34,-200L34,-197L36,-196L37,-191L30,-189L32,-186L35,-184L32,-182L33,-180L31,-181L28,-180L26,-180L22,-181L19,-181L20,-185L16,-187L15,-194L16,-194L17,-195L16,-196L17,-197L17,-200L20,-199L21,-200L22,-200L24,-199L21,-202L21,-203L23,-203ZM129,-46L128,-44L125,-44L124,-47L126,-50L127,-50L128,-51L129,-49L127,-47L129,-46ZM30,-206L28,-203L26,-206L27,-206L28,-206L29,-207L30,-206ZM23,-203L21,-203L20,-205L19,-205L19,-208L22,-209L20,-208L20,-209L25,-211L24,-208L26,-208L23,-205L23,-203ZM-211,-72L-211,-75L-209,-80L-204,-79L-204,-77L-203,-77L-204,-77L-200,-75L-202,-73L-203,-74L-208,-73L-210,-71L-211,-72ZM23,-144L22,-143L23,-136L21,-133L23,-128L25,-126L27,-119L26,-119L28,-115L28,-106L27,-104L29,-98L33,-97L35,-94L22,-84L17,-78L10,-76L9,-80L5,-81L3,-84L-25,-108L-25,-114L-20,-117L-15,-118L-14,-120L-10,-122L-11,-125L-8,-126L-3,-126L-3,-128L-5,-131L-5,-136L-6,-137L3,-143L10,-144L14,-143L18,-145L23,-144ZM-274,0L-273,3L-274,4L-275,3L-274,2L-275,0L-274,0ZM-226,0L-227,0L-226,2L-227,6L-230,10L-235,14L-237,20L-239,18L-242,18L-242,16L-241,16L-241,14L-240,10L-240,8L-240,10L-241,10L-241,11L-243,9L-243,4L-241,3L-242,1L-241,-1L-241,-3L-237,-5L-237,-6L-234,-3L-233,-2L-230,-1L-229,-2L-226,0ZM96,-124L98,-117L97,-110L94,-113L92,-118L91,-117L95,-111L101,-98L103,-95L102,-95L103,-92L107,-88L91,-88L91,-89L91,-88L72,-88L71,-116L69,-119L70,-125L76,-124L81,-122L87,-125L89,-124L90,-123L91,-123L96,-124ZM113,-72L118,-61L118,-62L119,-60L122,-59L126,-53L128,-52L127,-50L119,-58L116,-59L114,-58L112,-60L111,-57L110,-58L108,-57L108,-61L109,-69L110,-69L113,-72ZM-40,-112L-41,-111L-39,-114L-40,-112ZM8,-154L9,-154L8,-152L6,-153L8,-155L8,-154ZM-5,-167L-4,-165L0,-164L2,-165L4,-163L8,-163L9,-162L2,-158L-1,-153L1,-151L-1,-149L-2,-146L-4,-146L-6,-143L-12,-143L-15,-141L-17,-143L-17,-144L-19,-145L-20,-145L-20,-146L-19,-149L-20,-149L-19,-152L-20,-154L-19,-154L-18,-158L-16,-160L-17,-162L-21,-161L-22,-162L-23,-162L-23,-163L-24,-166L-20,-168L-5,-167ZM52,-214L54,-213L51,-212L50,-214L52,-214ZM64,-216L63,-214L64,-212L63,-211L58,-212L56,-212L56,-213L55,-213L54,-215L58,-217L64,-216ZM126,-50L124,-47L125,-44L128,-44L127,-43L130,-38L132,-36L141,-32L144,-32L135,-20L131,-20L126,-16L124,-16L122,-17L119,-14L114,-15L111,-18L108,-18L107,-21L106,-22L104,-27L102,-30L99,-32L100,-34L102,-35L102,-43L103,-44L104,-44L105,-48L106,-51L107,-51L108,-57L110,-58L111,-57L112,-60L114,-58L116,-59L119,-58L121,-57L126,-50ZM60,-239L59,-239L59,-238L63,-237L61,-235L64,-232L64,-230L66,-228L65,-227L69,-225L63,-219L60,-219L52,-217L53,-218L51,-218L51,-219L48,-219L48,-222L47,-225L53,-230L55,-230L54,-232L50,-233L51,-235L49,-236L49,-237L43,-239L44,-240L46,-239L52,-239L53,-239L53,-241L57,-242L60,-241L60,-239ZM-155,-16L-159,-9L-162,-10L-163,-9L-164,-9L-162,-15L-164,-20L-162,-23L-159,-22L-156,-19L-156,-18L-156,-19L-155,-16ZM25,-165L24,-160L22,-163L24,-164L24,-165L25,-165ZM14,-187L20,-185L19,-181L18,-180L15,-176L17,-177L18,-173L17,-172L18,-171L18,-170L20,-169L19,-168L16,-166L10,-167L8,-165L8,-163L7,-163L-4,-165L-5,-167L-3,-171L-3,-174L-1,-172L-3,-174L-3,-176L-5,-178L-6,-179L-4,-179L-11,-181L-12,-182L-11,-183L-12,-184L-8,-185L-7,-184L-3,-184L-5,-187L-3,-187L-3,-186L1,-187L0,-187L4,-189L4,-191L6,-192L10,-189L10,-188L12,-189L12,-188L14,-187ZM40,-9L40,-5L43,-6L43,-4L42,1L44,2L43,8L42,10L41,9L40,10L39,9L38,7L37,9L35,9L36,15L35,14L33,16L29,10L30,10L29,10L27,5L29,6L26,2L27,3L28,1L28,-1L29,0L30,-1L28,-2L29,-2L29,-4L34,-4L34,-9L40,-9ZM-15,-201L-17,-202L-18,-201L-19,-202L-17,-204L-15,-204L-13,-202L-15,-201ZM-14,-211L-13,-210L-14,-209L-16,-211L-14,-211ZM-7,-214L-10,-211L-5,-211L-4,-211L-6,-208L-8,-208L-6,-207L-9,-207L-6,-207L-4,-205L-3,-203L0,-201L0,-199L-2,-200L1,-199L0,-197L4,-197L4,-195L1,-193L3,-192L1,-191L-7,-191L-9,-189L-10,-190L-14,-188L-10,-192L-8,-192L-6,-194L-8,-193L-13,-194L-10,-196L-10,-197L-11,-197L-10,-198L-7,-199L-7,-201L-9,-202L-7,-203L-12,-203L-11,-206L-11,-207L-12,-206L-12,-207L-14,-205L-12,-209L-14,-209L-13,-209L-13,-211L-12,-212L-12,-214L-7,-214ZM122,-161L123,-159L120,-160L115,-159L113,-160L110,-160L110,-162L108,-164L104,-167L112,-166L115,-164L117,-164L122,-161ZM0,-45L0,-43L1,-42L1,-38L2,-38L1,-35L2,-34L2,-28L4,-25L3,-24L1,-23L-6,-19L-9,-21L-8,-22L-10,-28L-7,-33L-8,-44L-2,-44L0,-45ZM-34,-50L-34,-48L-33,-49L-32,-48L-31,-49L-29,-49L-27,-50L-25,-46L-26,-44L-25,-44L-24,-42L-24,-38L-23,-34L-25,-34L-25,-31L-26,-31L-27,-29L-28,-30L-29,-34L-32,-34L-31,-35L-33,-40L-37,-40L-40,-37L-41,-40L-43,-41L-44,-44L-45,-44L-44,-46L-41,-47L-41,-49L-41,-51L-37,-50L-34,-50ZM-50,-53L-49,-54L-46,-54L-49,-54L-49,-55L-46,-55L-45,-56L-41,-54L-42,-53L-45,-55L-47,-53L-50,-53ZM-45,-44L-46,-46L-45,-47L-46,-47L-45,-48L-47,-48L-48,-49L-50,-50L-45,-51L-41,-51L-41,-49L-41,-47L-44,-46L-45,-44ZM29,-4L28,-5L29,-9L34,-9L34,-4L29,-4ZM65,-139L70,-138L71,-138L72,-138L72,-137L68,-137L65,-138L64,-139L65,-139ZM63,-151L65,-150L66,-148L61,-151L63,-151ZM69,-157L66,-158L63,-158L65,-155L63,-156L64,-155L62,-156L63,-155L61,-157L60,-157L60,-155L62,-152L61,-152L62,-152L61,-151L65,-149L65,-147L63,-148L62,-148L64,-146L61,-146L63,-142L62,-144L61,-142L60,-144L60,-143L59,-144L59,-146L57,-147L59,-149L62,-148L63,-148L60,-149L57,-149L56,-151L57,-152L56,-152L53,-154L55,-155L56,-158L60,-160L65,-160L67,-159L69,-159L69,-161L70,-160L69,-157ZM-108,-241L-106,-241L-110,-240L-112,-241L-111,-242L-108,-241ZM-51,-243L-53,-242L-57,-242L-56,-243L-51,-243ZM-54,-261L-47,-261L-58,-261L-40,-260L-55,-260L-39,-260L-43,-258L-36,-259L-21,-259L-37,-258L-35,-257L-40,-256L-41,-255L-37,-255L-39,-254L-35,-254L-43,-253L-38,-252L-38,-251L-43,-251L-38,-250L-44,-250L-40,-249L-40,-248L-44,-248L-50,-249L-49,-248L-54,-248L-48,-248L-44,-247L-44,-246L-49,-247L-53,-247L-49,-247L-50,-246L-44,-245L-45,-244L-44,-244L-44,-243L-45,-242L-45,-243L-47,-242L-49,-244L-54,-245L-52,-244L-57,-243L-59,-242L-54,-242L-56,-241L-52,-242L-45,-242L-55,-239L-65,-237L-67,-238L-67,-237L-73,-234L-76,-234L-76,-233L-81,-232L-79,-233L-81,-234L-80,-233L-82,-233L-82,-232L-88,-231L-87,-229L-90,-229L-88,-228L-88,-227L-91,-226L-92,-226L-92,-225L-95,-225L-93,-224L-94,-223L-95,-222L-97,-219L-99,-219L-98,-219L-98,-218L-100,-217L-101,-217L-100,-218L-101,-218L-103,-218L-101,-219L-104,-219L-103,-221L-108,-220L-107,-220L-109,-220L-110,-222L-108,-223L-110,-223L-110,-224L-111,-224L-109,-226L-111,-225L-112,-228L-109,-228L-112,-228L-108,-230L-109,-231L-109,-230L-113,-228L-113,-231L-109,-232L-113,-231L-114,-232L-114,-233L-108,-235L-114,-233L-111,-235L-113,-235L-113,-236L-110,-237L-106,-236L-109,-237L-113,-236L-111,-238L-106,-238L-111,-238L-110,-239L-106,-239L-105,-240L-104,-240L-105,-240L-103,-242L-107,-242L-110,-243L-103,-242L-105,-244L-103,-244L-107,-244L-104,-245L-107,-245L-106,-245L-107,-246L-108,-244L-111,-244L-109,-246L-111,-246L-108,-247L-110,-247L-109,-248L-110,-248L-110,-249L-112,-249L-110,-250L-113,-251L-113,-252L-121,-253L-131,-252L-133,-253L-130,-253L-135,-254L-126,-255L-137,-255L-123,-257L-119,-258L-124,-258L-111,-260L-82,-260L-81,-260L-83,-260L-75,-260L-84,-261L-54,-261ZM-262,-72L-263,-64L-262,-63L-262,-64L-261,-63L-264,-61L-264,-59L-267,-55L-271,-56L-273,-59L-273,-62L-271,-65L-267,-65L-267,-66L-269,-69L-268,-69L-267,-72L-262,-72ZM-172,-22L-172,-20L-174,-20L-174,-17L-170,-8L-172,-8L-177,-5L-180,-8L-180,-11L-179,-16L-179,-18L-181,-18L-180,-21L-182,-21L-184,-24L-183,-27L-181,-28L-182,-30L-179,-33L-180,-35L-175,-30L-176,-26L-175,-28L-174,-27L-172,-25L-172,-22ZM-246,-60L-250,-59L-252,-59L-254,-56L-255,-57L-257,-55L-257,-54L-259,-52L-261,-54L-260,-56L-262,-56L-265,-58L-264,-61L-259,-64L-257,-63L-251,-64L-249,-64L-248,-62L-249,-62L-246,-60ZM48,-175L50,-173L49,-172L44,-173L42,-172L41,-173L41,-171L46,-165L44,-167L42,-167L37,-173L36,-171L35,-174L37,-174L39,-174L40,-176L42,-177L46,-175L48,-175ZM-210,-79L-210,-77L-211,-75L-211,-72L-211,-73L-215,-73L-217,-72L-218,-74L-218,-75L-214,-74L-212,-75L-213,-77L-213,-78L-215,-79L-214,-80L-210,-79ZM56,-183L58,-182L56,-180L54,-176L53,-176L46,-175L41,-178L42,-180L41,-181L43,-181L43,-182L47,-181L51,-184L56,-183ZM293,-6L294,-4L294,-2L292,-6L293,-6ZM376,-4L374,-2L372,-1L363,-2L361,-1L361,2L363,6L364,5L366,3L367,4L370,2L371,3L371,4L370,4L368,6L365,8L368,12L367,15L369,16L369,18L367,18L366,20L365,19L365,17L363,14L364,11L363,11L361,12L361,23L359,23L358,22L359,14L357,14L357,11L359,8L359,4L360,3L360,0L362,-4L363,-3L364,-5L369,-3L373,-3L376,-7L377,-6L376,-4ZM384,-3L386,-6L387,-6L387,-4L386,-3L388,-1L385,-2L385,-1L386,4L384,1L383,-5L385,-9L384,-3ZM386,-8L385,-9L387,-11L386,-8ZM353,-17L354,-15L352,-15L355,-9L354,-8L358,-4L356,-3L355,-4L353,-1L354,3L352,5L351,4L350,7L350,10L348,15L344,17L344,13L342,14L340,12L339,13L336,14L336,12L331,12L331,5L329,3L329,0L328,-1L329,-8L330,-8L330,-7L332,-3L336,-4L338,-6L342,-5L344,-6L345,-9L346,-10L346,-12L347,-12L348,-18L353,-17ZM290,-21L293,-21L295,-17L300,-13L302,-9L303,-8L304,-9L308,-3L310,-3L310,-2L308,-1L311,-2L312,-1L311,2L314,4L315,8L315,11L317,10L319,13L317,24L316,22L315,23L314,22L314,24L305,13L302,3L298,-1L296,-8L294,-10L291,-14L287,-20L286,-23L290,-21ZM276,-47L275,-48L276,-55L276,-47ZM213,-139L215,-136L218,-135L217,-133L220,-128L218,-128L220,-124L221,-124L228,-119L226,-118L226,-114L235,-109L239,-109L243,-106L251,-105L250,-111L251,-111L253,-108L254,-107L261,-106L262,-107L262,-108L260,-110L263,-111L264,-113L267,-116L269,-115L271,-117L272,-116L272,-115L273,-114L273,-113L275,-112L276,-111L275,-109L277,-108L274,-108L272,-106L272,-104L271,-95L269,-96L270,-92L270,-88L269,-88L266,-95L265,-95L265,-92L263,-94L263,-96L265,-96L266,-99L264,-100L258,-101L256,-104L256,-103L252,-106L252,-103L255,-101L254,-100L253,-98L255,-97L256,-94L257,-93L259,-87L258,-86L257,-88L257,-87L256,-87L255,-89L256,-88L255,-87L253,-85L253,-81L252,-80L249,-79L250,-79L247,-73L242,-69L242,-67L240,-66L239,-63L238,-64L237,-63L237,-61L238,-54L238,-55L238,-54L237,-46L238,-42L237,-41L236,-39L237,-37L234,-37L234,-34L232,-33L229,-36L226,-46L216,-66L211,-86L212,-87L211,-87L210,-89L211,-89L209,-89L210,-85L206,-83L200,-89L203,-90L204,-92L202,-91L200,-91L198,-94L198,-95L197,-94L197,-95L198,-96L198,-97L201,-96L204,-97L202,-102L201,-103L200,-105L198,-106L198,-108L200,-111L201,-110L204,-111L206,-118L209,-122L208,-125L210,-127L205,-130L205,-133L204,-134L203,-136L208,-135L210,-136L213,-139ZM-15,-201L-15,-197L-15,-195L-23,-193L-25,-193L-23,-194L-25,-194L-24,-195L-25,-195L-21,-197L-24,-196L-22,-198L-24,-199L-23,-200L-24,-201L-20,-201L-19,-203L-21,-203L-20,-204L-18,-204L-18,-203L-17,-205L-17,-204L-19,-202L-15,-201ZM124,-151L128,-154L129,-153L129,-151L132,-149L133,-147L141,-143L147,-144L146,-146L148,-146L149,-148L153,-149L160,-146L164,-143L166,-143L168,-139L167,-135L168,-135L167,-134L167,-132L168,-132L168,-130L170,-124L172,-124L173,-123L171,-118L175,-113L178,-112L179,-108L180,-108L180,-106L177,-104L177,-100L164,-103L162,-107L160,-108L156,-105L153,-106L145,-112L141,-119L139,-119L138,-120L137,-119L136,-119L134,-122L133,-125L132,-128L128,-130L125,-133L126,-140L124,-141L119,-148L120,-149L118,-153L119,-153L119,-154L122,-151L124,-151ZM121,-145L124,-141L126,-140L125,-133L128,-130L132,-128L133,-125L134,-122L135,-120L137,-118L133,-119L131,-115L126,-116L118,-123L113,-126L109,-127L108,-128L107,-131L113,-135L113,-136L113,-142L116,-146L120,-145L120,-144L121,-145ZM-33,-233L-31,-234L-32,-233L-31,-232L-29,-232L-29,-230L-32,-229L-41,-226L-46,-228L-49,-228L-47,-229L-52,-230L-47,-231L-48,-231L-47,-231L-52,-232L-50,-232L-51,-232L-50,-233L-48,-233L-49,-234L-46,-233L-46,-232L-45,-231L-43,-233L-42,-232L-40,-233L-39,-232L-39,-233L-37,-233L-34,-234L-33,-233ZM99,-129L99,-128L97,-128L97,-127L98,-125L97,-124L99,-124L98,-117L96,-123L97,-130L99,-131L99,-129ZM42,-149L41,-146L41,-143L34,-147L34,-149L37,-148L42,-149ZM26,-158L26,-152L24,-152L23,-151L22,-158L24,-159L26,-158ZM35,-177L34,-176L36,-174L34,-175L32,-174L32,-169L35,-167L38,-163L43,-162L42,-160L49,-156L49,-154L48,-156L45,-157L44,-154L46,-151L45,-151L43,-148L42,-148L43,-151L42,-155L29,-163L27,-165L26,-169L23,-170L19,-168L20,-169L18,-170L18,-171L17,-172L18,-173L17,-175L20,-175L21,-177L23,-175L24,-177L26,-176L27,-178L31,-179L32,-178L35,-177ZM-227,-74L-224,-72L-226,-72L-227,-71L-228,-72L-230,-74L-227,-74ZM109,-127L103,-124L107,-120L105,-119L103,-118L102,-116L99,-116L99,-129L102,-127L107,-131L109,-127ZM363,-132L364,-132L364,-131L366,-129L367,-124L366,-124L366,-122L365,-125L365,-123L364,-124L362,-129L361,-130L362,-129L361,-128L359,-130L361,-129L359,-131L361,-133L363,-132ZM370,-134L372,-133L372,-131L370,-132L368,-129L366,-131L365,-131L367,-134L368,-133L369,-135L370,-134ZM373,-160L380,-153L381,-149L380,-148L382,-145L383,-142L385,-140L385,-138L384,-137L383,-139L382,-139L383,-138L382,-138L382,-136L380,-138L380,-136L377,-136L376,-136L375,-137L375,-136L377,-135L376,-134L375,-132L373,-133L372,-136L370,-136L367,-135L364,-135L365,-133L361,-133L361,-135L362,-135L364,-139L369,-140L372,-139L371,-146L372,-146L371,-145L373,-143L375,-145L376,-148L375,-151L374,-154L373,-155L371,-159L374,-158L374,-159L372,-159L372,-160L373,-160ZM373,-169L376,-168L376,-170L378,-168L379,-166L380,-167L377,-165L377,-162L372,-164L370,-163L368,-164L372,-161L371,-161L370,-160L367,-164L367,-165L366,-166L369,-166L364,-173L373,-169ZM213,-139L211,-137L210,-139L213,-139ZM218,-185L217,-185L217,-184L215,-183L217,-179L216,-178L211,-179L211,-174L213,-172L210,-173L206,-172L208,-171L211,-166L210,-164L211,-163L207,-165L197,-165L194,-166L192,-165L193,-163L187,-164L186,-163L182,-160L182,-157L180,-159L176,-159L175,-162L174,-162L173,-165L172,-165L169,-168L161,-167L158,-170L150,-174L144,-172L148,-160L147,-159L142,-163L139,-162L138,-161L138,-164L134,-166L132,-169L130,-170L133,-170L132,-172L132,-173L137,-173L135,-174L135,-178L130,-179L126,-176L124,-177L124,-178L125,-178L122,-181L119,-181L117,-183L117,-187L117,-190L121,-188L120,-190L124,-194L131,-193L135,-190L134,-191L137,-190L139,-192L142,-192L147,-190L148,-191L150,-190L151,-191L151,-192L147,-194L148,-196L148,-198L150,-198L148,-198L148,-199L147,-199L147,-201L156,-202L162,-203L163,-205L168,-204L170,-201L177,-201L177,-199L179,-199L181,-201L184,-202L183,-201L188,-198L197,-191L198,-192L201,-191L205,-191L212,-187L215,-187L215,-188L218,-185ZM126,-16L123,-11L123,4L125,7L121,11L118,19L113,14L113,12L102,4L102,-1L105,-7L103,-15L102,-17L106,-22L107,-22L108,-18L111,-18L114,-15L119,-14L122,-17L124,-16L126,-16ZM211,-163L207,-159L204,-158L203,-156L201,-156L201,-157L199,-157L197,-155L197,-153L193,-152L191,-154L189,-153L185,-153L185,-154L186,-156L188,-155L189,-156L191,-155L194,-158L191,-159L189,-160L189,-159L185,-160L187,-162L186,-163L187,-165L193,-163L192,-165L194,-166L197,-165L207,-165L211,-163ZM312,-42L309,-43L309,-45L308,-44L304,-55L305,-57L307,-58L310,-58L314,-56L314,-58L315,-58L317,-58L318,-59L320,-50L317,-48L317,-47L315,-47L317,-44L313,-44L313,-43L312,-42ZM345,-150L351,-145L354,-139L354,-138L352,-137L353,-137L351,-137L350,-135L350,-136L349,-135L346,-138L346,-140L343,-143L343,-144L345,-144L342,-147L342,-149L345,-149L345,-150ZM57,-163L54,-161L52,-164L54,-166L57,-164L57,-163ZM137,-113L135,-113L134,-115L131,-115L133,-119L135,-119L136,-117L135,-116L136,-116L137,-113ZM296,-89L299,-87L300,-84L302,-83L303,-84L305,-83L304,-82L306,-80L306,-79L304,-79L304,-77L308,-75L314,-66L317,-65L316,-64L318,-61L318,-59L317,-58L315,-58L314,-58L314,-56L312,-57L312,-63L309,-66L308,-70L305,-74L303,-74L302,-72L300,-73L297,-70L297,-71L296,-78L294,-79L293,-81L293,-82L292,-81L292,-82L294,-86L295,-85L296,-85L294,-89L295,-90L296,-89ZM99,-131L97,-130L98,-134L100,-136L101,-134L99,-131ZM-25,-31L-25,-28L-26,-26L-22,-24L-23,-18L-27,-20L-34,-28L-30,-34L-28,-34L-28,-30L-27,-29L-26,-31L-25,-31ZM70,-125L69,-119L71,-116L73,-80L70,-80L70,-78L46,-94L41,-90L39,-93L35,-94L33,-97L29,-98L27,-104L28,-106L28,-110L28,-115L26,-119L29,-122L29,-125L32,-128L32,-130L42,-127L44,-124L50,-122L54,-120L56,-122L56,-127L60,-130L64,-128L65,-127L69,-126L70,-125ZM239,-40L241,-38L245,-29L245,-26L242,-24L240,-25L239,-28L239,-33L239,-39L240,-38L239,-40ZM63,-206L63,-204L61,-203L62,-201L57,-200L54,-202L54,-204L50,-204L50,-207L52,-208L58,-208L63,-206ZM63,-211L66,-207L65,-206L62,-206L58,-208L49,-207L50,-211L52,-211L55,-209L57,-210L56,-212L58,-212L63,-211ZM-6,-137L-5,-136L-5,-131L-3,-128L-3,-126L-8,-126L-11,-125L-10,-122L-14,-120L-15,-118L-20,-117L-24,-114L-25,-108L-28,-107L-32,-107L-36,-99L-40,-95L-43,-86L-49,-86L-46,-95L-43,-99L-41,-104L-39,-106L-37,-111L-33,-112L-29,-116L-27,-119L-27,-124L-26,-128L-24,-131L-19,-133L-16,-140L-14,-140L-13,-138L-8,-139L-8,-138L-6,-137ZM72,-174L72,-177L67,-183L70,-183L73,-182L74,-180L77,-177L74,-177L74,-176L72,-174ZM-278,-103L-283,-90L-283,-86L-284,-88L-283,-83L-281,-75L-279,-75L-277,-73L-271,-75L-270,-75L-268,-74L-268,-75L-268,-76L-265,-78L-262,-85L-256,-86L-253,-86L-253,-85L-256,-79L-258,-73L-258,-76L-262,-72L-267,-72L-268,-69L-269,-69L-267,-66L-267,-65L-271,-65L-273,-59L-277,-65L-280,-66L-280,-65L-284,-63L-289,-64L-291,-67L-297,-69L-299,-72L-304,-74L-304,-76L-307,-77L-308,-82L-307,-82L-307,-83L-306,-86L-306,-90L-310,-98L-309,-98L-310,-98L-311,-100L-310,-100L-312,-102L-313,-101L-312,-102L-313,-102L-312,-105L-314,-108L-314,-111L-315,-111L-316,-113L-317,-119L-316,-123L-318,-124L-319,-124L-320,-126L-322,-119L-320,-113L-320,-110L-319,-106L-319,-107L-318,-106L-319,-97L-318,-96L-317,-97L-316,-94L-318,-91L-319,-94L-322,-99L-321,-104L-323,-106L-323,-107L-324,-106L-327,-110L-325,-111L-324,-110L-323,-113L-326,-118L-326,-128L-319,-129L-319,-128L-310,-124L-303,-124L-302,-125L-297,-125L-294,-121L-294,-117L-292,-115L-288,-118L-286,-118L-283,-109L-283,-105L-278,-103ZM59,-163L61,-161L61,-160L57,-158L55,-158L54,-160L55,-162L59,-163ZM12,-77L12,-67L10,-62L4,-61L3,-60L1,-60L-2,-61L-6,-58L-6,-57L-8,-57L-10,-54L-12,-54L-13,-53L-13,-50L-16,-48L-16,-42L-18,-41L-19,-43L-20,-43L-21,-41L-22,-42L-24,-41L-25,-44L-26,-44L-25,-46L-27,-50L-29,-49L-31,-49L-32,-48L-33,-49L-34,-48L-34,-49L-34,-52L-36,-55L-36,-60L-35,-60L-34,-63L-32,-61L-32,-62L-28,-62L-28,-63L-27,-62L-16,-62L-16,-66L-17,-67L-19,-100L-14,-100L3,-84L5,-81L9,-80L10,-76L12,-77ZM294,-86L292,-81L290,-82L289,-79L286,-79L287,-75L286,-74L292,-66L291,-60L294,-55L297,-48L294,-41L294,-43L294,-47L293,-53L289,-60L288,-67L287,-66L285,-70L285,-67L284,-66L283,-67L284,-66L282,-63L281,-65L281,-64L280,-65L279,-64L279,-66L278,-64L278,-71L275,-77L275,-76L274,-78L275,-77L275,-78L274,-80L272,-80L271,-82L271,-81L268,-85L269,-85L269,-88L270,-89L269,-96L271,-95L272,-104L272,-106L274,-108L277,-108L275,-109L276,-113L279,-109L280,-109L282,-106L282,-103L281,-101L280,-99L281,-95L285,-96L286,-93L288,-92L288,-88L290,-88L291,-86L294,-87L294,-86ZM50,-167L53,-165L52,-164L51,-161L48,-164L48,-165L50,-167ZM290,-188L292,-182L297,-181L297,-182L299,-182L305,-178L299,-177L298,-176L297,-174L294,-173L293,-171L288,-172L288,-170L291,-168L289,-166L289,-165L287,-163L280,-163L277,-160L266,-164L252,-164L247,-170L241,-172L234,-173L231,-179L227,-182L221,-184L219,-186L227,-191L233,-190L235,-188L242,-187L243,-189L241,-192L241,-195L250,-193L253,-190L256,-189L260,-190L264,-189L271,-186L277,-186L281,-187L283,-189L290,-188ZM-36,-60L-40,-65L-43,-67L-48,-66L-49,-64L-47,-73L-48,-78L-47,-81L-49,-84L-50,-83L-49,-85L-38,-85L-38,-91L-35,-94L-34,-103L-25,-103L-25,-108L-14,-100L-19,-100L-17,-67L-16,-66L-16,-62L-27,-62L-28,-63L-28,-62L-32,-62L-32,-61L-34,-63L-35,-60L-36,-60ZM306,-25L310,-20L311,-12L313,-9L313,-6L313,-7L311,-5L305,-11L303,-16L300,-27L303,-25L303,-23L305,-24L306,-24L306,-25ZM353,-17L348,-18L347,-12L346,-12L346,-10L345,-9L344,-6L342,-5L338,-6L336,-4L332,-3L330,-7L330,-8L334,-6L334,-10L335,-10L335,-11L340,-13L342,-19L344,-16L345,-20L346,-18L346,-20L347,-21L346,-22L348,-23L350,-28L350,-27L351,-28L353,-26L352,-24L354,-25L354,-23L355,-24L358,-22L358,-21L355,-20L356,-18L353,-17ZM43,-92L44,-86L47,-82L46,-68L40,-58L40,-55L37,-53L31,-54L29,-52L23,-54L21,-52L19,-55L16,-56L12,-54L11,-51L11,-47L8,-50L7,-49L7,-48L6,-51L5,-51L3,-53L4,-54L1,-56L1,-60L4,-61L10,-62L11,-63L12,-68L12,-77L17,-78L22,-84L35,-94L39,-93L41,-90L43,-92ZM40,-55L42,-50L43,-49L43,-47L41,-44L35,-27L33,-26L32,-29L31,-28L30,-28L27,-24L26,-19L25,-20L25,-18L21,-19L21,-18L20,-19L21,-18L18,-17L16,-20L17,-22L16,-22L16,-23L15,-23L13,-26L10,-26L11,-27L8,-26L8,-37L9,-37L11,-42L10,-46L12,-54L16,-56L19,-55L21,-52L23,-54L29,-52L31,-54L37,-53L40,-55ZM-246,-60L-247,-60L-246,-58L-248,-54L-248,-50L-248,-51L-249,-50L-249,-44L-256,-45L-260,-52L-258,-52L-257,-55L-255,-57L-254,-56L-251,-60L-250,-59L-246,-60ZM10,-193L8,-193L10,-193L10,-194L12,-197L15,-199L17,-198L17,-197L16,-196L17,-196L17,-194L15,-194L15,-191L12,-193L10,-193ZM33,-238L30,-238L32,-239L33,-240L33,-238ZM63,-241L60,-239L60,-241L54,-241L52,-239L46,-239L44,-240L41,-239L41,-238L38,-238L37,-237L36,-237L34,-236L35,-235L33,-233L31,-233L31,-231L30,-229L30,-228L28,-228L27,-227L27,-222L29,-221L28,-220L28,-218L27,-217L27,-215L25,-215L24,-217L23,-215L22,-215L19,-213L16,-212L13,-214L13,-215L15,-215L13,-215L15,-216L12,-216L12,-217L14,-217L13,-217L14,-218L16,-219L12,-217L12,-218L13,-218L12,-219L13,-219L12,-219L11,-220L17,-221L11,-221L12,-222L11,-223L15,-223L11,-223L18,-225L15,-225L17,-226L19,-225L18,-226L19,-227L24,-227L25,-228L22,-227L21,-227L25,-230L28,-231L26,-231L28,-233L27,-233L30,-233L28,-233L28,-234L29,-235L32,-235L30,-236L31,-236L33,-236L31,-237L36,-238L34,-238L37,-240L39,-240L38,-240L40,-241L40,-240L42,-241L41,-240L43,-241L42,-241L45,-241L43,-242L46,-242L48,-241L50,-244L52,-243L51,-242L54,-243L55,-243L56,-244L57,-243L57,-242L58,-243L63,-242L59,-242L63,-241ZM41,-256L47,-255L40,-254L41,-255L38,-256L41,-256ZM31,-258L40,-256L36,-256L32,-253L27,-254L32,-255L26,-255L31,-256L25,-255L20,-257L28,-257L31,-256L29,-257L31,-258ZM39,-258L51,-258L43,-257L34,-257L39,-258ZM250,-111L251,-105L245,-106L240,-109L235,-109L228,-113L226,-114L226,-118L227,-119L228,-119L229,-120L230,-120L244,-111L250,-111ZM162,-100L165,-96L170,-94L173,-89L171,-82L170,-82L169,-81L169,-76L167,-75L166,-72L163,-72L162,-69L159,-68L156,-67L152,-76L161,-80L161,-88L160,-92L160,-96L161,-96L160,-99L161,-99L162,-100ZM210,-139L211,-137L210,-136L208,-135L204,-136L203,-135L205,-133L205,-130L210,-127L208,-125L209,-122L206,-118L204,-111L201,-110L200,-111L198,-108L198,-106L200,-105L201,-103L202,-102L204,-97L201,-96L198,-97L198,-96L197,-95L195,-96L190,-102L190,-101L191,-101L186,-100L184,-101L177,-100L177,-104L180,-106L180,-108L179,-108L178,-112L175,-113L171,-118L176,-116L181,-116L186,-118L186,-122L187,-123L189,-123L190,-125L192,-125L193,-126L193,-130L195,-131L193,-133L196,-134L195,-135L196,-138L194,-141L196,-143L204,-144L206,-143L208,-140L210,-139ZM-231,-35L-231,-32L-232,-31L-233,-31L-233,-29L-235,-33L-234,-34L-233,-33L-234,-34L-235,-34L-236,-36L-238,-36L-241,-33L-240,-30L-242,-29L-243,-32L-243,-31L-245,-33L-247,-34L-248,-33L-248,-34L-247,-39L-246,-38L-245,-36L-245,-37L-243,-36L-238,-39L-236,-39L-233,-37L-231,-35ZM377,-38L379,-29L378,-28L378,-26L377,-29L376,-27L377,-24L376,-23L376,-25L375,-24L372,-26L372,-30L370,-32L370,-30L367,-31L366,-28L365,-29L366,-32L368,-33L369,-35L371,-34L371,-33L372,-35L373,-35L373,-36L375,-36L375,-39L377,-38ZM368,-37L366,-40L367,-41L367,-44L368,-44L368,-37ZM369,-38L370,-46L370,-42L369,-38ZM351,-34L356,-42L356,-46L357,-42L351,-34ZM371,-46L373,-45L374,-42L373,-42L373,-41L372,-44L371,-44L370,-46L371,-46ZM365,-47L367,-47L367,-46L366,-44L364,-42L363,-48L365,-47ZM372,-51L375,-45L373,-45L370,-50L370,-51L372,-51ZM368,-50L369,-47L367,-49L367,-48L366,-51L368,-50ZM358,-54L361,-53L361,-49L357,-54L358,-54ZM355,-75L358,-73L359,-74L359,-71L361,-69L360,-65L359,-64L359,-62L361,-57L362,-56L362,-57L363,-58L365,-55L366,-57L367,-56L367,-55L368,-53L369,-53L369,-51L364,-56L364,-53L361,-56L360,-55L358,-56L358,-59L357,-60L357,-58L355,-60L353,-65L355,-65L354,-74L355,-75ZM47,-202L56,-201L58,-197L56,-195L58,-195L60,-190L56,-187L57,-185L53,-186L49,-186L48,-187L47,-186L46,-188L44,-188L44,-189L42,-190L41,-189L40,-190L36,-191L37,-192L36,-196L34,-197L35,-200L34,-200L42,-203L45,-203L44,-203L45,-202L47,-202ZM-194,-74L-193,-74L-194,-72L-197,-72L-197,-74L-194,-74ZM342,-164L343,-163L342,-162L342,-160L344,-158L340,-154L341,-152L345,-150L345,-149L342,-149L342,-147L339,-148L339,-147L336,-148L336,-150L337,-150L336,-151L335,-153L333,-154L331,-155L334,-158L334,-161L339,-160L337,-162L339,-162L339,-163L340,-163L340,-165L342,-164ZM-20,-145L-24,-144L-23,-149L-25,-149L-25,-150L-24,-152L-25,-150L-23,-158L-23,-161L-22,-162L-21,-161L-17,-162L-16,-160L-18,-158L-19,-154L-20,-154L-19,-152L-20,-149L-19,-149L-20,-147L-20,-145ZM99,-124L97,-124L98,-125L97,-125L98,-128L99,-128L99,-124ZM147,-98L146,-98L146,-101L147,-104L148,-100L147,-98ZM72,-174L76,-173L76,-172L75,-172L74,-168L70,-169L66,-168L60,-168L60,-169L58,-170L59,-171L55,-171L55,-173L52,-176L54,-176L56,-180L58,-182L63,-181L67,-183L71,-179L72,-174ZM382,-173L381,-172L380,-170L380,-173L382,-173L382,-174L382,-173ZM386,-189L385,-188L384,-189L385,-190L385,-191L386,-189ZM341,-202L362,-185L359,-186L357,-185L360,-181L365,-178L367,-175L365,-177L363,-178L364,-175L362,-177L350,-191L342,-199L343,-199L340,-201L341,-202ZM50,-204L54,-204L54,-202L47,-202L50,-204L49,-204L50,-203L50,-204ZM109,-248L111,-248L110,-246L111,-245L117,-243L111,-243L108,-243L109,-244L107,-245L103,-245L103,-246L105,-246L104,-247L106,-247L105,-248L109,-248ZM279,-249L283,-248L276,-248L279,-249ZM269,-252L280,-252L279,-251L274,-252L278,-251L271,-250L264,-252L266,-253L269,-252ZM130,-253L119,-251L114,-250L115,-249L112,-248L106,-249L109,-250L108,-250L110,-251L108,-251L113,-252L129,-254L132,-253L130,-253ZM343,-163L342,-164L343,-165L342,-167L338,-172L339,-173L343,-172L340,-180L340,-181L339,-183L335,-182L335,-181L331,-181L327,-185L317,-188L306,-197L298,-199L292,-198L291,-197L294,-194L294,-193L295,-190L296,-189L294,-187L283,-189L281,-187L277,-186L271,-186L264,-189L260,-190L256,-189L253,-190L250,-193L241,-195L241,-192L243,-189L242,-187L235,-188L233,-190L227,-191L223,-189L222,-187L220,-187L218,-185L215,-188L215,-187L212,-187L205,-191L201,-191L198,-192L197,-191L188,-198L183,-201L184,-202L181,-201L179,-199L177,-199L177,-201L170,-201L168,-204L163,-205L162,-203L156,-202L147,-201L147,-199L148,-199L148,-198L150,-198L148,-198L148,-196L147,-194L151,-192L151,-191L150,-190L148,-191L147,-190L142,-192L139,-192L137,-190L134,-191L135,-190L131,-193L124,-194L120,-190L121,-188L117,-189L117,-187L117,-183L119,-181L122,-181L125,-178L124,-177L126,-176L124,-176L125,-175L122,-174L121,-171L124,-167L124,-168L124,-165L128,-161L127,-159L126,-159L120,-163L120,-164L117,-164L115,-164L112,-166L104,-167L94,-173L95,-173L97,-173L97,-175L98,-176L96,-177L100,-179L99,-180L97,-179L97,-180L98,-181L100,-182L99,-184L100,-185L99,-185L100,-187L94,-188L93,-190L88,-189L87,-192L84,-192L84,-194L82,-196L77,-195L76,-198L79,-199L73,-203L73,-205L67,-207L65,-209L63,-214L64,-216L64,-217L68,-218L64,-219L63,-219L69,-225L65,-227L66,-228L64,-230L64,-232L61,-235L63,-237L60,-238L59,-239L65,-241L69,-240L68,-240L74,-240L86,-237L87,-235L82,-233L67,-235L74,-233L74,-231L76,-229L82,-228L83,-228L79,-230L79,-231L86,-229L87,-230L85,-232L89,-234L94,-233L94,-235L92,-236L92,-238L90,-239L95,-238L97,-237L94,-236L98,-235L100,-235L100,-236L102,-237L109,-238L108,-239L111,-239L112,-239L111,-239L112,-238L111,-238L114,-238L115,-238L122,-239L124,-238L124,-239L126,-239L123,-241L125,-241L132,-241L142,-238L143,-239L137,-241L136,-243L134,-244L137,-245L137,-247L142,-247L144,-247L144,-244L147,-243L150,-239L153,-238L153,-237L150,-235L151,-234L146,-235L153,-233L155,-235L156,-237L154,-238L155,-239L158,-239L161,-237L165,-236L162,-237L162,-238L160,-239L152,-240L150,-241L151,-243L147,-244L150,-246L148,-247L151,-246L150,-245L152,-244L158,-243L152,-245L156,-245L155,-246L156,-246L167,-245L166,-244L167,-243L168,-243L169,-242L170,-243L168,-244L167,-245L161,-246L158,-248L170,-249L169,-248L171,-247L169,-248L172,-249L167,-250L170,-251L168,-251L179,-252L192,-252L189,-253L194,-253L192,-254L197,-255L201,-254L198,-254L205,-254L203,-253L212,-253L219,-252L216,-252L220,-251L219,-251L208,-247L216,-248L218,-249L215,-249L217,-249L222,-249L226,-247L223,-248L227,-249L242,-247L244,-248L243,-248L250,-248L255,-247L256,-247L255,-246L258,-246L254,-246L266,-243L265,-245L278,-244L277,-245L281,-244L279,-245L280,-246L277,-246L280,-247L279,-247L293,-246L292,-245L291,-246L291,-245L290,-245L291,-245L293,-246L296,-246L309,-243L323,-243L330,-241L333,-238L334,-239L332,-240L333,-241L344,-241L351,-239L353,-240L348,-242L359,-241L386,-237L395,-233L390,-235L392,-235L404,-233L405,-232L402,-232L404,-232L400,-232L404,-231L403,-230L406,-229L405,-229L394,-232L389,-232L384,-234L384,-233L387,-232L387,-230L386,-229L379,-231L382,-230L377,-230L379,-230L386,-229L396,-225L396,-224L390,-225L391,-224L386,-222L386,-220L385,-219L386,-218L381,-219L377,-219L377,-217L375,-219L374,-218L374,-217L371,-218L374,-212L378,-212L379,-210L384,-207L381,-208L383,-205L386,-203L384,-202L383,-201L387,-198L383,-198L386,-194L386,-191L369,-204L365,-208L365,-210L363,-212L366,-212L365,-219L368,-220L364,-224L365,-224L361,-224L364,-222L362,-222L362,-220L361,-219L356,-223L350,-222L350,-217L354,-215L347,-215L345,-215L347,-216L340,-217L339,-217L340,-216L339,-216L334,-216L334,-215L328,-216L325,-215L324,-213L325,-212L324,-209L324,-207L322,-203L326,-202L329,-200L328,-201L329,-201L331,-200L330,-199L332,-199L332,-200L333,-199L332,-201L334,-201L341,-198L340,-198L345,-195L346,-191L352,-183L353,-175L352,-167L349,-164L344,-166L344,-164L342,-164L343,-163ZM192,-257L198,-256L187,-255L189,-257L192,-257ZM181,-258L186,-257L185,-257L186,-256L173,-257L181,-258ZM93,-259L95,-258L91,-258L86,-258L93,-259ZM178,-259L181,-258L179,-258L180,-258L169,-258L178,-259ZM-25,-108L-25,-103L-34,-103L-35,-94L-38,-91L-38,-85L-49,-85L-50,-83L-49,-86L-43,-86L-40,-95L-36,-99L-32,-107L-28,-107L-25,-108L-25,-110L-25,-108ZM131,-115L134,-115L135,-113L137,-113L139,-110L143,-106L143,-103L146,-98L148,-98L148,-97L152,-92L160,-91L161,-88L161,-80L152,-76L144,-75L141,-73L139,-68L137,-69L128,-70L126,-66L119,-79L114,-84L113,-90L111,-95L108,-97L107,-101L100,-111L98,-111L99,-116L102,-116L103,-118L105,-119L107,-120L103,-124L109,-127L113,-126L118,-123L126,-116L131,-115ZM107,-88L108,-85L110,-76L113,-72L110,-69L109,-69L107,-51L106,-51L105,-48L104,-44L102,-43L102,-38L101,-41L99,-43L99,-49L97,-49L97,-48L95,-48L97,-45L93,-39L92,-39L90,-42L86,-38L84,-38L83,-39L80,-38L77,-42L75,-42L73,-36L72,-35L71,-35L71,-40L68,-44L66,-51L65,-52L68,-63L71,-63L70,-80L73,-80L72,-88L91,-88L91,-89L91,-88L107,-88ZM102,-38L102,-35L100,-34L99,-32L102,-30L104,-27L106,-22L101,-15L99,-16L97,-14L96,-15L94,-15L93,-14L89,-19L88,-18L85,-18L81,-23L80,-25L79,-27L76,-30L74,-33L73,-34L72,-35L73,-36L75,-42L77,-42L80,-38L83,-39L84,-38L86,-38L90,-42L92,-39L93,-40L97,-45L95,-48L97,-48L97,-49L99,-49L99,-43L101,-41L102,-38ZM-36,-60L-36,-55L-34,-52L-34,-50L-45,-51L-50,-50L-49,-51L-50,-51L-49,-53L-47,-53L-45,-55L-42,-53L-41,-54L-45,-56L-46,-55L-49,-55L-49,-57L-52,-59L-50,-62L-48,-66L-42,-67L-40,-65L-36,-60ZM-31,-34L-34,-28L-38,-32L-40,-34L-39,-35L-40,-37L-37,-40L-34,-40L-32,-38L-31,-35L-32,-34L-31,-34ZM-265,-58L-262,-56L-260,-56L-261,-53L-267,-55L-265,-58ZM146,-45L146,-38L144,-32L141,-32L132,-36L127,-43L129,-46L132,-42L137,-44L139,-43L141,-45L146,-45ZM125,7L123,4L123,-12L126,-17L129,-17L131,-20L135,-20L144,-32L146,-38L146,-45L149,-47L151,-48L153,-48L152,-42L153,-42L152,-42L152,-38L144,-18L138,-10L131,-3L125,7ZM52,-176L55,-173L55,-171L59,-171L58,-168L60,-166L59,-165L59,-163L57,-163L57,-164L54,-166L53,-165L50,-167L51,-167L50,-169L51,-169L50,-170L50,-172L49,-172L49,-173L50,-173L48,-175L50,-176L52,-176ZM-163,-22L-164,-18L-162,-15L-164,-10L-168,-10L-168,-8L-170,-8L-172,-14L-173,-14L-174,-16L-174,-20L-172,-20L-171,-24L-168,-23L-167,-24L-163,-24L-162,-24L-163,-22ZM56,-185L56,-183L51,-184L47,-181L45,-181L42,-183L43,-185L48,-187L49,-186L53,-186L56,-185ZM42,-177L40,-176L39,-174L37,-174L35,-174L36,-174L34,-176L35,-177L37,-177L41,-178L42,-177ZM44,-212L42,-209L42,-211L44,-212ZM52,-232L48,-232L46,-231L46,-230L47,-229L45,-228L38,-224L39,-220L43,-217L41,-216L42,-216L42,-215L37,-214L39,-214L37,-207L35,-207L34,-205L31,-205L29,-207L30,-207L30,-208L26,-213L26,-215L27,-215L27,-217L28,-218L28,-220L29,-221L27,-222L26,-226L28,-228L31,-228L30,-229L31,-231L31,-233L33,-233L35,-237L37,-237L38,-238L41,-238L41,-239L43,-239L49,-237L49,-236L51,-235L50,-233L52,-232ZM115,-145L112,-142L113,-135L102,-127L99,-129L99,-132L101,-134L100,-136L99,-136L98,-139L98,-140L99,-140L100,-142L100,-144L107,-143L110,-145L114,-145L115,-145ZM70,-78L71,-63L68,-63L65,-52L66,-51L68,-44L67,-44L65,-43L65,-42L61,-37L57,-36L57,-35L56,-33L53,-32L50,-31L50,-32L48,-30L46,-30L45,-35L42,-39L43,-40L47,-40L45,-43L44,-50L43,-53L42,-53L40,-58L46,-68L47,-82L44,-86L43,-92L46,-94L70,-78ZM3,-44L2,-42L4,-40L5,-37L5,-28L5,-25L4,-25L2,-28L2,-38L1,-38L1,-42L0,-43L0,-45L3,-44ZM292,-81L293,-81L294,-78L296,-78L297,-70L300,-73L302,-72L303,-74L305,-74L308,-70L309,-66L312,-63L312,-59L311,-57L310,-58L306,-58L304,-55L306,-47L303,-51L300,-51L300,-54L299,-55L297,-54L297,-49L296,-39L297,-37L298,-38L301,-29L304,-28L306,-25L306,-24L305,-24L303,-23L303,-25L301,-27L300,-26L295,-33L294,-33L295,-43L297,-48L294,-55L291,-60L292,-66L286,-74L287,-75L286,-79L289,-79L290,-82L292,-81ZM189,-156L188,-155L185,-155L185,-153L189,-153L191,-154L193,-152L197,-153L198,-150L201,-149L203,-146L200,-145L199,-146L195,-143L193,-148L191,-149L190,-148L190,-146L188,-146L188,-145L187,-145L184,-144L184,-146L184,-149L183,-151L180,-152L180,-153L183,-153L184,-155L183,-156L184,-156L184,-158L185,-157L186,-159L188,-157L187,-156L189,-156ZM180,-146L178,-146L178,-145L176,-145L176,-142L172,-140L173,-139L171,-138L168,-139L166,-143L164,-143L160,-146L154,-149L149,-148L148,-146L146,-146L145,-151L142,-152L142,-154L143,-153L143,-155L141,-155L142,-154L140,-156L140,-159L143,-157L144,-157L145,-159L141,-162L139,-162L140,-159L138,-161L139,-162L142,-163L147,-159L151,-159L150,-161L152,-164L154,-163L152,-164L153,-165L158,-163L159,-160L164,-159L167,-155L171,-152L180,-148L180,-146ZM-182,-41L-185,-41L-184,-41L-184,-43L-182,-44L-182,-41ZM32,-130L32,-128L29,-125L29,-122L27,-119L25,-126L23,-128L21,-133L23,-138L22,-143L25,-145L27,-145L28,-143L30,-145L29,-141L30,-138L28,-134L32,-130ZM110,-160L113,-160L116,-158L116,-155L120,-154L119,-154L119,-153L118,-153L120,-149L119,-148L121,-145L120,-144L120,-145L116,-146L115,-145L114,-145L110,-145L107,-143L100,-144L100,-142L99,-140L98,-142L98,-143L98,-144L96,-143L94,-144L92,-141L89,-141L85,-144L83,-144L83,-142L81,-141L79,-143L75,-143L77,-144L74,-144L75,-145L73,-147L73,-148L71,-149L71,-150L72,-149L73,-149L72,-150L72,-153L70,-153L70,-155L71,-156L77,-156L77,-157L79,-158L77,-158L77,-159L83,-159L88,-162L92,-162L96,-159L102,-158L107,-158L110,-160ZM74,-162L74,-160L77,-159L77,-158L73,-158L70,-155L71,-157L69,-157L70,-160L69,-161L72,-162L74,-162ZM350,-90L350,-88L347,-92L347,-94L348,-100L349,-101L350,-99L350,-90ZM102,4L93,4L90,6L89,6L89,4L90,-3L94,-8L92,-10L93,-15L96,-15L97,-14L99,-16L101,-15L102,-17L103,-15L105,-7L102,-1L102,4ZM97,-179L91,-177L90,-176L90,-177L89,-176L90,-174L91,-173L94,-173L94,-172L91,-172L88,-170L86,-171L86,-172L84,-173L86,-176L81,-176L82,-177L80,-177L83,-177L82,-177L81,-179L81,-178L78,-177L77,-175L76,-174L76,-173L73,-173L72,-174L74,-176L74,-177L77,-177L74,-180L73,-182L69,-183L63,-181L58,-182L56,-183L56,-185L57,-185L57,-187L60,-190L58,-193L63,-194L75,-192L76,-195L82,-196L84,-194L84,-192L87,-192L88,-189L93,-190L94,-188L100,-187L100,-186L99,-185L100,-185L99,-184L100,-182L97,-181L97,-179ZM-193,-172L-184,-172L-182,-173L-175,-180L-175,-179L-173,-180L-172,-179L-174,-174L-173,-174L-173,-171L-178,-170L-178,-171L-179,-169L-183,-168L-187,-163L-186,-161L-184,-161L-184,-162L-184,-161L-188,-160L-188,-161L-189,-160L-193,-159L-196,-158L-196,-159L-198,-154L-201,-151L-202,-153L-200,-155L-202,-154L-202,-149L-206,-145L-204,-148L-204,-149L-205,-149L-204,-150L-205,-150L-203,-153L-205,-152L-206,-149L-206,-150L-206,-148L-208,-149L-207,-151L-208,-150L-208,-149L-206,-147L-207,-147L-208,-148L-206,-146L-207,-145L-208,-146L-207,-144L-209,-145L-208,-144L-206,-144L-206,-140L-207,-143L-207,-141L-207,-142L-209,-141L-209,-142L-209,-141L-208,-141L-208,-140L-207,-140L-209,-138L-211,-139L-210,-138L-211,-137L-210,-136L-213,-136L-215,-133L-215,-134L-215,-133L-218,-132L-224,-127L-225,-128L-228,-123L-229,-118L-228,-107L-229,-103L-232,-100L-233,-100L-232,-101L-234,-104L-233,-106L-234,-106L-234,-107L-235,-107L-235,-109L-234,-110L-235,-110L-234,-114L-236,-119L-240,-117L-240,-120L-241,-119L-243,-120L-242,-120L-245,-120L-244,-121L-247,-119L-247,-121L-248,-120L-252,-119L-253,-120L-254,-119L-251,-119L-253,-117L-251,-116L-253,-115L-254,-117L-255,-115L-255,-116L-256,-115L-258,-116L-257,-117L-259,-118L-260,-117L-264,-118L-264,-119L-264,-117L-267,-116L-266,-117L-268,-117L-268,-116L-269,-115L-273,-113L-272,-113L-273,-114L-273,-113L-276,-112L-277,-108L-278,-109L-278,-104L-279,-103L-283,-105L-283,-109L-286,-118L-288,-118L-292,-115L-294,-117L-294,-121L-297,-125L-302,-125L-303,-124L-310,-124L-319,-128L-319,-129L-326,-128L-325,-131L-327,-132L-327,-133L-332,-136L-331,-138L-332,-142L-331,-144L-332,-145L-331,-146L-331,-147L-330,-146L-330,-148L-328,-148L-330,-148L-331,-147L-332,-148L-331,-156L-328,-160L-326,-165L-317,-176L-315,-176L-317,-176L-315,-179L-313,-183L-309,-182L-312,-180L-309,-182L-312,-179L-311,-179L-308,-182L-307,-185L-238,-185L-237,-186L-237,-184L-233,-184L-231,-182L-225,-182L-222,-183L-216,-178L-216,-177L-214,-177L-215,-176L-214,-176L-214,-175L-212,-173L-214,-167L-219,-162L-218,-161L-207,-165L-206,-167L-205,-167L-200,-167L-193,-172ZM-310,-205L-313,-204L-310,-206L-309,-206L-310,-205ZM-313,-207L-313,-205L-314,-205L-313,-204L-315,-203L-315,-205L-314,-205L-315,-206L-314,-206L-315,-206L-313,-207ZM-314,-210L-317,-207L-315,-210L-317,-209L-314,-211L-314,-210ZM-313,-213L-313,-212L-312,-212L-313,-212L-313,-211L-316,-211L-316,-212L-313,-213ZM-311,-213L-310,-213L-310,-211L-310,-212L-311,-210L-314,-210L-311,-213ZM-289,-241L-319,-218L-314,-219L-315,-218L-314,-216L-315,-215L-307,-217L-308,-216L-307,-213L-309,-208L-306,-207L-311,-203L-311,-204L-308,-207L-312,-205L-309,-207L-310,-208L-310,-210L-311,-210L-308,-212L-309,-212L-308,-214L-309,-213L-310,-213L-308,-216L-311,-213L-313,-213L-311,-215L-312,-214L-313,-215L-314,-215L-313,-213L-315,-213L-316,-215L-318,-216L-315,-217L-316,-218L-319,-217L-321,-217L-320,-218L-327,-218L-327,-219L-326,-219L-329,-219L-328,-219L-330,-220L-328,-221L-332,-220L-331,-221L-334,-220L-335,-219L-334,-219L-336,-218L-338,-218L-347,-215L-343,-217L-345,-217L-340,-220L-335,-220L-336,-221L-333,-222L-346,-218L-352,-215L-351,-215L-352,-214L-373,-207L-382,-205L-389,-203L-381,-206L-378,-206L-376,-207L-366,-211L-358,-215L-363,-214L-362,-215L-363,-215L-366,-213L-366,-215L-367,-215L-372,-214L-364,-220L-372,-217L-373,-219L-370,-220L-369,-220L-370,-219L-367,-220L-371,-220L-370,-221L-371,-221L-369,-222L-361,-226L-359,-226L-352,-227L-350,-228L-350,-229L-347,-230L-353,-229L-353,-230L-359,-229L-359,-231L-357,-231L-359,-232L-348,-234L-346,-234L-348,-233L-342,-233L-343,-234L-342,-235L-342,-234L-339,-234L-342,-234L-341,-235L-344,-235L-344,-236L-346,-238L-329,-242L-325,-243L-325,-242L-315,-244L-314,-244L-316,-243L-313,-244L-308,-243L-309,-242L-292,-242L-289,-241ZM186,-163L187,-162L185,-160L189,-159L189,-160L191,-159L194,-158L191,-155L188,-156L187,-156L188,-158L186,-159L185,-157L184,-158L184,-156L183,-156L184,-155L183,-153L180,-153L180,-152L183,-151L184,-149L184,-145L180,-146L180,-148L167,-154L164,-159L159,-160L157,-163L153,-165L152,-164L154,-163L152,-164L150,-161L151,-159L148,-160L144,-172L150,-174L158,-170L161,-167L169,-168L172,-165L173,-165L174,-162L175,-162L176,-159L180,-159L182,-157L183,-160L186,-163ZM-180,-35L-179,-33L-182,-30L-181,-28L-183,-27L-184,-24L-182,-20L-185,-17L-188,-16L-189,-15L-190,-16L-192,-16L-195,-17L-193,-15L-193,-10L-191,-10L-191,-9L-197,-3L-197,-4L-199,-3L-201,-5L-202,-10L-204,-11L-202,-14L-204,-18L-202,-25L-208,-25L-210,-28L-216,-28L-217,-30L-217,-34L-218,-37L-219,-37L-217,-44L-214,-47L-212,-48L-214,-47L-214,-43L-215,-40L-214,-37L-213,-37L-212,-39L-213,-44L-208,-46L-209,-48L-208,-49L-207,-46L-205,-46L-204,-45L-203,-42L-198,-43L-197,-41L-194,-41L-190,-42L-192,-43L-185,-43L-188,-43L-186,-40L-185,-40L-184,-39L-184,-40L-182,-38L-183,-35L-184,-35L-183,-34L-180,-35ZM314,-86L312,-84L311,-84L311,-82L310,-80L309,-76L313,-72L313,-71L322,-62L325,-51L325,-46L320,-42L319,-43L319,-42L318,-42L318,-40L317,-41L318,-39L316,-40L317,-38L314,-35L314,-40L312,-42L313,-43L313,-44L317,-44L315,-47L317,-47L317,-48L320,-50L319,-54L318,-57L318,-61L316,-64L317,-65L314,-66L308,-75L304,-77L304,-79L306,-79L306,-80L304,-82L305,-83L303,-84L302,-83L300,-84L299,-87L296,-89L297,-91L298,-90L299,-91L301,-90L304,-93L306,-92L309,-91L310,-88L314,-86ZM156,-67L154,-66L154,-63L146,-59L144,-57L142,-57L139,-54L136,-54L134,-52L129,-51L126,-61L126,-66L128,-70L137,-69L139,-68L141,-73L144,-75L152,-76L156,-67Z"/>
+        <g id="pins"></g>
+      </svg>
+      <div id="pin-note" aria-live="polite">Select a dot on the map.</div>
+      <div class="maptools">
+        <div class="key">
+          <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.5" fill="#1F2A30"/></svg>Lived</span>
+          <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="#fff" stroke="#2B4F8E" stroke-width="2.4"/></svg>Presented my research</span>
+          <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="4" fill="#8A979E"/></svg>Visited</span>
+        </div>
+        <div class="toggle" role="group" aria-label="Map view">
+          <button data-view="europe" aria-pressed="true">Europe</button>
+          <button data-view="world" aria-pressed="false">World</button>
+        </div>
+      </div>
+    </div>
+    <div class="places">
+      <div>
+        <h3>Lived</h3>
+        <p class="small">Lahore (until 2016) · Wageningen (2016–2019) · Leipzig (since 2020), plus many Dutch and German cities in between</p>
+      </div>
+      <div>
+        <h3>Presented my research</h3>
+        <p class="small">Madrid 2022 · Chicago 2022 · Aarhus 2024 · Vienna 2025 · Sassari 2026 · Leipzig 2026 · Kyoto 2026</p>
+      </div>
+      <div>
+        <h3>Visited</h3>
+        <p class="small">Paris · Brussels · Oslo · Riga · Copenhagen · Prague · Zurich · Slovakia · Slovenia · Croatia · Sofia · Istanbul · Malta · Mallorca · Sardinia · Dallas</p>
+      </div>
+    </div>
+    <p class="muted small" style="margin-top:24px">Languages: English (C1), German (B1), Urdu (native). Permanent residence in Germany.</p>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="contact">
+    <span class="dots big" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <h2 style="margin-top:18px">Get in touch</h2>
+    <p style="max-width:700px">From January 2027 I am open to roles in science management, project coordination and research. If you would like to use the nitrogen or phosphorus surplus data, or just want to talk about nitrogen, please write to me.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:masooma.batool@ufz.de">masooma.batool@ufz.de</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/masooma-batool/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://orcid.org/0000-0003-1385-2512" target="_blank" rel="noopener">ORCID</a>
+      <a class="btn ghost" href="https://linktr.ee/masooma.batool" target="_blank" rel="noopener">All my links</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">© 2026 Masooma Batool. The four coloured dots are the four nitrogen types from my research: manure-led, fertilizer-led, mixed and mostly natural. Map data: R <em>maps</em> package; typology map: Batool et al. (2025), <em>Nature Food</em>.</footer>
+
+<script>
+(function(){
+  /* nitrogen types: values from Batool et al. (2025), Nature Food (total N surplus, mean of 16 estimates) */
+  var T = {
+    man:{name:'MAN', label:'manure-led', color:'var(--man)',
+      text:'The Netherlands, Denmark, parts of Spain and southern UK. The highest nitrogen surplus of the four types: 61 kg N per hectare in 2019. In the 2010s, manure supplied 55% of nitrogen inputs and fertilizer 32%.'},
+    fert:{name:'FERT', label:'fertilizer-led', color:'var(--fert)',
+      text:'Central Europe, for example Germany and France. In the 2010s, synthetic fertilizer supplied 45% of nitrogen inputs and manure 28%. Nitrogen surplus in 2019: 33 kg N per hectare.'},
+    mod:{name:'MOD', label:'mixed inputs', color:'var(--mod)',
+      text:'Eastern Europe and the Mediterranean. A balanced mix of manure and fertilizer, and a lower nitrogen surplus: 20 kg N per hectare in 2019.'},
+    nat:{name:'NAT', label:'mostly natural', color:'var(--nat)',
+      text:'Northern Europe: Norway, Sweden and Finland. Natural landscapes dominate, and nitrogen surplus stays at about 4 kg N per hectare.'}
+  };
+  var card = document.getElementById('typo-card');
+  var chips = document.querySelectorAll('.chip');
+  function show(k){
+    var t = T[k];
+    card.innerHTML = '<h3><i style="background:'+t.color+'"></i>'+t.name+' · '+t.label+'</h3><p style="margin:8px 0 0">'+t.text+'</p>';
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.t === k ? 'true' : 'false'); });
+  }
+  chips.forEach(function(c){ c.addEventListener('click', function(){ show(c.dataset.t); }); });
+  show('man');
+
+  /* places: projected coordinates (Equal Earth) */
+  var P = [
+    {n:'Lahore, Pakistan', x:207.6, y:-124.4, k:'lived', note:'Home until 2016: BSc, teaching and my first environmental job.'},
+    {n:'Wageningen, the Netherlands', x:13.8, y:-194.4, k:'lived', note:'Home 2016–2019: MSc at Wageningen University and work for INMS.'},
+    {n:'Leipzig, Germany', x:30.3, y:-192.5, k:'lived', also:true, note:'Home since 2020: PhD and research at UFZ. Also where I presented at CBC 2026.'},
+    {n:'Madrid, Spain', x:-9.8, y:-156.4, k:'talk', note:'XXI International Nitrogen Workshop, 2022: poster, Best Student Poster Award.'},
+    {n:'Chicago, USA', x:-230.8, y:-161.5, k:'talk', note:'AGU Fall Meeting, 2022: poster.'},
+    {n:'Aarhus, Denmark', x:24.0, y:-206.9, k:'talk', note:'XXII International Nitrogen Workshop, 2024: talk.'},
+    {n:'Vienna, Austria', x:41.2, y:-182.6, k:'talk', note:'EGU General Assembly, 2025: talk.'},
+    {n:'Sassari, Sardinia, Italy', x:22.7, y:-157.5, k:'talk', note:'International Nitrogen Workshop, 2026: poster.'},
+    {n:'Kyoto, Japan', x:372.5, y:-137.1, k:'talk', note:'10th International Nitrogen Conference (N2026), November 2026: talk and poster.'},
+    {n:'Oslo, Norway', x:24.4, y:-217.4, k:'visit'},
+    {n:'Riga, Latvia', x:56.3, y:-209.2, k:'visit'},
+    {n:'Copenhagen, Denmark', x:29.7, y:-205.6, k:'visit'},
+    {n:'Prague, Czechia', x:35.7, y:-188.6, k:'visit'},
+    {n:'Croatia', x:41.1, y:-173.4, k:'visit'},
+    {n:'Sofia, Bulgaria', x:61.1, y:-164.3, k:'visit'},
+    {n:'Istanbul, Türkiye', x:76.8, y:-158.4, k:'visit'},
+    {n:'Malta', x:39.6, y:-140.3, k:'visit'},
+    {n:'Mallorca, Spain', x:7.1, y:-153.4, k:'visit'},
+    {n:'Zurich, Switzerland', x:21.6, y:-179.9, k:'visit'},
+    {n:'Slovakia', x:48.9, y:-184.2, k:'visit'},
+    {n:'Slovenia', x:37.8, y:-175.7, k:'visit'},
+    {n:'Paris, France', x:5.9, y:-184.7, k:'visit'},
+    {n:'Brussels, Belgium', x:10.7, y:-191.0, k:'visit'},
+    {n:'Dallas, USA', x:-268.7, y:-128.9, k:'visit'}
+  ];
+  var VIEWS = {europe:[-40,-232,168,105], world:[-290,-262,750,250]};
+  var NS = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('placemap'), g = document.getElementById('pins'), note = document.getElementById('pin-note');
+  var order = {visit:0, talk:1, lived:2};
+  P.sort(function(a,b){ return order[a.k]-order[b.k]; });
+  var pins = P.map(function(p){
+    var el = document.createElementNS(NS,'g');
+    el.setAttribute('class','pin'); el.setAttribute('tabindex','0'); el.setAttribute('role','button');
+    el.setAttribute('aria-label', p.n);
+    var c = document.createElementNS(NS,'circle'); c.setAttribute('cx',p.x); c.setAttribute('cy',p.y);
+    if (p.k==='lived'){ c.setAttribute('fill','#1F2A30'); c.setAttribute('class','ring'); c.setAttribute('stroke','#fff'); }
+    else if (p.k==='talk'){ c.setAttribute('fill','#fff'); c.setAttribute('stroke','#2B4F8E'); c.setAttribute('class','ring'); }
+    else { c.setAttribute('fill','#8A979E'); c.setAttribute('class','ring'); c.setAttribute('stroke','#fff'); }
+    var t = document.createElementNS(NS,'title'); t.textContent = p.n; c.appendChild(t);
+    el.appendChild(c);
+    function pick(){ note.innerHTML = '<b>'+p.n+'</b>'+(p.note ? ' · '+p.note : (p.k==='visit' ? ' · Visited' : '')); }
+    el.addEventListener('click', pick);
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); } });
+    g.appendChild(el);
+    return {c:c, k:p.k};
+  });
+  function setView(v){
+    var b = VIEWS[v]; svg.setAttribute('viewBox', b.join(' '));
+    var u = b[2] / 168;  // keep dots the same size on screen
+    pins.forEach(function(p){
+      var r = (p.k==='lived' ? 2.3 : p.k==='talk' ? 2.0 : 1.4) * u;
+      p.c.setAttribute('r', r);
+      p.c.setAttribute('stroke-width', (p.k==='talk' ? 0.9 : 0.5) * u);
+    });
+    document.querySelectorAll('.toggle button').forEach(function(b2){ b2.setAttribute('aria-pressed', b2.dataset.view===v ? 'true':'false'); });
+  }
+  document.querySelectorAll('.toggle button').forEach(function(b){ b.addEventListener('click', function(){ setView(b.dataset.view); }); });
+  setView('europe');
+})();
+</script>
+</body>
+</html>
